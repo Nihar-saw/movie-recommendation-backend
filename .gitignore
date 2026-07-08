@@ -1,0 +1,4 @@
+node_modules/
+*.pkl
+ml/models/*.pkl
+.env
