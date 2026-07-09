@@ -2,6 +2,28 @@ const axios = require("axios");
 
 const BASE_URL = "https://api.themoviedb.org/3";
 
+const BASE = "https://api.themoviedb.org/3";
+
+const API = process.env.TMDB_API_KEY;
+
+const movieDetails = async (tmdbId)=>{
+
+    const {data}=await axios.get(
+
+        `${BASE}/movie/${tmdbId}`,
+        {
+            params:{
+                api_key:API,
+                append_to_response:"videos,credits"
+            }
+        }
+    );
+    return data;
+}
+
+module.exports={
+    movieDetails
+}
 const tmdb = axios.create({
     baseURL: BASE_URL,
     params: {
