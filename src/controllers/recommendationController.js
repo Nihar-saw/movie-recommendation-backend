@@ -1,4 +1,4 @@
-const aiService = require("../services/aiService");
+const recommendationService = require("../services/recommendationService");
 
 const recommendMovie = async (req, res) => {
 
@@ -19,7 +19,7 @@ const recommendMovie = async (req, res) => {
         }
 
         const recommendations =
-            await aiService.getRecommendations(movie);
+            await recommendationService.getRecommendations(movie);
 
         res.json({
 
@@ -55,7 +55,7 @@ const hybridRecommendation = async (
         const userId = req.user._id;
 
         const recommendations =
-            await aiService.getHybridRecommendations(
+            await recommendationService.getHybridRecommendations(
                 movie,
                 userId
             );

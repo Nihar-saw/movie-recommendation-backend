@@ -5,6 +5,16 @@ import numpy as np
 
 def collaborative_recommend(user_id):
 
+    # Map MongoDB ObjectId string to an integer index in the dataset if it's not an integer
+    try:
+        user_id = int(user_id)
+    except (ValueError, TypeError):
+        # Stable hash of the ObjectId string to a valid index in the user-movie index
+        import hashlib
+        hash_val = int(hashlib.md5(str(user_id).encode()).hexdigest(), 16)
+        user_list = list(loader.user_movie.index)
+        user_id = user_list[hash_val % len(user_list)]
+
     if user_id not in loader.user_movie.index:
 
         return []
@@ -40,4 +50,20 @@ def collaborative_recommend(user_id):
         reverse=True
     )
 
-    return scores[:20]
+    recommendations = []
+    from services.tmdb_mapper import get_tmdb
+
+    for movie_id, score in scores[:20]:
+        movie_row = loader.movies[loader.movies["movieId"] == movie_id]
+        if not movie_row.empty:
+            row = movie_row.iloc[0]
+            tmdb_id = get_tmdb(movie_id)
+            recommendations.append({
+                "movieId": int(movie_id),
+                "tmdbId": int(tmdb_id) if tmdb_id is not None else None,
+                "title": row.title,
+                "genres": row.genres,
+                "score": float(score)
+            })
+
+    return recommendations

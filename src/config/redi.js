@@ -1,11 +1,3 @@
-const { createClient } = require("redis");
-
-const client = createClient({
-    url: process.env.REDIS_URL
-});
-
-client.on("error", err => console.log(err));
-
-client.connect();
-
-module.exports = client;
+// Deprecated: Use config/redis.js instead.
+// This file acts as a backwards-compatibility redirect.
+module.exports = require("./redis");

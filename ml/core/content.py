@@ -3,6 +3,9 @@ from core.loader import loader
 
 def content_recommend(movie, limit=10):
 
+    if not movie or not isinstance(movie, str):
+        return []
+
     movies = loader.movies
 
     similarity = loader.similarity
@@ -32,13 +35,20 @@ def content_recommend(movie, limit=10):
 
     recommendations = []
 
+    from services.tmdb_mapper import get_tmdb
+
     for score in scores[1:limit + 1]:
 
         row = movies.iloc[score[0]]
+        
+        movie_id = int(row.movieId)
+        tmdb_id = get_tmdb(movie_id)
 
         recommendations.append({
 
-            "movieId": int(row.movieId),
+            "movieId": movie_id,
+
+            "tmdbId": int(tmdb_id) if tmdb_id is not None else None,
 
             "title": row.title,
 

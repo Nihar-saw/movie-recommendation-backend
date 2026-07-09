@@ -11,6 +11,7 @@ const userRoutes = require("./routes/userRoutes");
 const ratingRoutes = require("./routes/ratingRoutes");
 const recommendationRoutes = require("./routes/recommendationRoutes");
 const historyRoutes = require("./routes/historyRoutes");
+const chatRoutes = require("./routes/chatRoutes");
 
 const {
     notFound,
@@ -47,6 +48,7 @@ app.use("/api/auth", authRoutes);
 app.use("/api/ratings", ratingRoutes);
 app.use("/api/recommendations", recommendationRoutes);
 app.use("/api/history", historyRoutes);
+app.use("/api/chat", chatRoutes);
 
 app.use(notFound);
 

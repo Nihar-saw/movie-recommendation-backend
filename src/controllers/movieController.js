@@ -1,4 +1,6 @@
 const tmdb = require("../services/tmdbService");
+const jwt = require("jsonwebtoken");
+const movieService = require("../services/movieService");
 
 const trendingMovies = async (req, res) => {
     try {
@@ -81,7 +83,19 @@ const movieDetails = async (req, res) => {
 
     try {
 
-        const movie = await tmdb.getMovieDetails(req.params.id);
+        const authHeader = req.headers.authorization;
+        let userId = null;
+        if (authHeader && authHeader.startsWith("Bearer")) {
+            try {
+                const token = authHeader.split(" ")[1];
+                const decoded = jwt.verify(token, process.env.JWT_SECRET);
+                userId = decoded.id;
+            } catch (err) {
+                // Ignore token issues on public details view
+            }
+        }
+
+        const movie = await movieService.getMovieWithUserContext(req.params.id, userId);
 
         res.json({
             success: true,
