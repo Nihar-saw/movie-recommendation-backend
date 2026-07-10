@@ -1,0 +1,16 @@
+info: 🐍 Starting Python ML Service... {"timestamp":"2026-07-10T16:08:51.151Z"}
+info: 🐍 Python service exited with code 1 {"timestamp":"2026-07-10T16:08:55.318Z"}
+info: 🐍 Starting Python ML Service... {"timestamp":"2026-07-10T16:29:21.552Z"}
+info: 🐍 Stopping Python ML Service... {"timestamp":"2026-07-10T16:30:22.802Z"}
+info: 🐍 Starting Python ML Service... {"timestamp":"2026-07-10T16:30:31.175Z"}
+info: 🐍 Stopping Python ML Service... {"timestamp":"2026-07-10T16:31:52.370Z"}
+info: 🐍 Starting Python ML Service... {"timestamp":"2026-07-10T16:32:01.402Z"}
+info: 🐍 Python service exited with code 1 {"timestamp":"2026-07-10T16:32:04.888Z"}
+info: 🐍 Starting Python ML Service... {"timestamp":"2026-07-10T16:33:09.533Z"}
+info: 🐍 Stopping Python ML Service... {"timestamp":"2026-07-10T16:41:42.412Z"}
+info: 🐍 Starting Python ML Service... {"timestamp":"2026-07-10T16:41:53.829Z"}
+info: 🐍 Starting Python ML Service... {"timestamp":"2026-07-10T16:52:59.831Z"}
+info: 🐍 Starting Python ML Service... {"timestamp":"2026-07-10T16:53:10.662Z"}
+info: 🐍 Python ML Service is already running. {"timestamp":"2026-07-10T16:53:18.266Z"}
+info: 🐍 Starting Python ML Service... {"timestamp":"2026-07-10T16:55:11.933Z"}
+info: 🐍 Python ML Service is already running. {"timestamp":"2026-07-10T16:55:31.690Z"}

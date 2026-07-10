@@ -6,3 +6,4 @@ scikit-learn
 scikit-surprise
 joblib
 scipy
+groq
