@@ -14,3 +14,10 @@ info: 🐍 Starting Python ML Service... {"timestamp":"2026-07-10T16:53:10.662Z"
 info: 🐍 Python ML Service is already running. {"timestamp":"2026-07-10T16:53:18.266Z"}
 info: 🐍 Starting Python ML Service... {"timestamp":"2026-07-10T16:55:11.933Z"}
 info: 🐍 Python ML Service is already running. {"timestamp":"2026-07-10T16:55:31.690Z"}
+error: Python service unavailable: Invalid URL {"timestamp":"2026-07-11T15:51:03.092Z"}
+warn: ⚠ Python ML Service is unavailable. {"timestamp":"2026-07-11T15:51:03.097Z"}
+error: Python service unavailable:  {"timestamp":"2026-07-11T16:52:39.502Z"}
+warn: ⚠ Python ML Service is unavailable. {"timestamp":"2026-07-11T16:52:39.504Z"}
+error: Python service unavailable: ECONNREFUSED {"timestamp":"2026-07-11T16:53:22.554Z"}
+warn: ⚠ Python ML Service is unavailable. {"timestamp":"2026-07-11T16:53:22.557Z"}
+info: Python service is managed independently. {"timestamp":"2026-07-11T16:57:28.462Z"}
