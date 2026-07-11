@@ -1,6 +1,14 @@
 node_modules/
-*.pkl
-ml/models/*.pkl
 .env
 ml/.env
 ml/venv/
+*.pkl
+ml/models/*.pkl
+ml/dataset/*.csv
+__pycache__/
+ml/**/__pycache__/
+
+# Python
+ml/venv/
+__pycache__/
+*.pyc

@@ -7,24 +7,23 @@ MODEL_DIR = BASE_DIR / "models"
 
 
 class ModelLoader:
-
     def __init__(self):
+        self.movies = None
+        self.tfidf_matrix = None
+        self.user_movie = None
+        self.latent = None
+        self.is_loaded = False
 
-        self.movies = joblib.load(
-            MODEL_DIR / "movies.pkl"
-        )
+    def load_models(self):
+        if self.is_loaded:
+            return
 
-        self.similarity = joblib.load(
-            MODEL_DIR / "content_similarity.pkl"
-        )
-
-        self.user_movie = joblib.load(
-            MODEL_DIR / "user_movie.pkl"
-        )
-
-        self.latent = joblib.load(
-            MODEL_DIR / "latent_matrix.pkl"
-        )
-
+        print("Loading models...")
+        self.movies = joblib.load(MODEL_DIR / "movies.pkl")
+        self.tfidf_matrix = joblib.load(MODEL_DIR / "content.pkl")
+        self.user_movie = joblib.load(MODEL_DIR / "user_movie.pkl")
+        self.latent = joblib.load(MODEL_DIR / "latent_matrix.pkl")
+        self.is_loaded = True
+        print("ML Service Ready.")
 
 loader = ModelLoader()

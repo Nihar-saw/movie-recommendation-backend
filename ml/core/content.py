@@ -1,4 +1,5 @@
 from core.loader import loader
+from sklearn.metrics.pairwise import cosine_similarity
 
 
 def content_recommend(movie, limit=10):
@@ -7,8 +8,7 @@ def content_recommend(movie, limit=10):
         return []
 
     movies = loader.movies
-
-    similarity = loader.similarity
+    tfidf_matrix = loader.tfidf_matrix
 
     movie = movie.lower()
 
@@ -26,7 +26,11 @@ def content_recommend(movie, limit=10):
 
         return []
 
-    scores = list(enumerate(similarity[index]))
+    # Dynamically compute similarity for the selected movie
+    target_vector = tfidf_matrix[index]
+    similarity = cosine_similarity(target_vector, tfidf_matrix).flatten()
+
+    scores = list(enumerate(similarity))
 
     scores.sort(
         key=lambda x: x[1],

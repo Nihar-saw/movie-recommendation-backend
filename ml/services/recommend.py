@@ -1,6 +1,16 @@
 from pathlib import Path
 import joblib
 import pandas as pd
+from sklearn.metrics.pairwise import cosine_similarity
+
+movie_vectors = joblib.load("models/content.pkl")
+
+movie_index = ...
+
+scores = cosine_similarity(
+    movie_vectors[movie_index],
+    movie_vectors
+).flatten()
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 

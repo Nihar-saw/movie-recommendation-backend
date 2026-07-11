@@ -4,16 +4,24 @@ from pydantic import BaseModel
 from typing import Optional
 from dotenv import load_dotenv
 import os
+from contextlib import asynccontextmanager
 
 # Load .env from the ml/ directory (for local development)
 load_dotenv(os.path.join(os.path.dirname(__file__), ".env"))
 
-
+from core.startup import init_models
 from core.content import content_recommend
 from core.hybrid import hybrid
 from services.chatbot import ask_movie_ai
 
-app = FastAPI()
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    # Execute startup logic
+    init_models()
+    yield
+    # Cleanup logic (if any) could go here
+
+app = FastAPI(lifespan=lifespan)
 
 # Add CORS Middleware
 app.add_middleware(
