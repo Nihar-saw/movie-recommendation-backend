@@ -2,6 +2,12 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import Optional
+from dotenv import load_dotenv
+import os
+
+# Load .env from the ml/ directory (for local development)
+load_dotenv(os.path.join(os.path.dirname(__file__), ".env"))
+
 
 from core.content import content_recommend
 from core.hybrid import hybrid
