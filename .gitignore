@@ -3,3 +3,4 @@ node_modules/
 ml/models/*.pkl
 .env
 ml/.env
+ml/venv/
