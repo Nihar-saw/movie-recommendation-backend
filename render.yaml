@@ -1,0 +1,36 @@
+services:
+  # Node.js Express Backend
+  - type: web
+    name: movie-recommendation-backend
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node src/server.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGO_URI
+        sync: false
+      - key: JWT_SECRET
+        sync: false
+      - key: TMDB_API_KEY
+        sync: false
+      - key: GROQ_API_KEY
+        sync: false
+      - key: PYTHON_SERVICE_URL
+        fromService:
+          name: movie-recommendation-ml
+          type: web
+          property: host
+
+  # Python FastAPI ML Service
+  - type: web
+    name: movie-recommendation-ml
+    runtime: python
+    plan: free
+    rootDir: ml
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn api:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: GROQ_API_KEY
+        sync: false
