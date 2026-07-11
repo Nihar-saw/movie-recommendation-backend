@@ -8,7 +8,7 @@ const checkPythonService = async () => {
         const response = await axios.get(`${PY_URL}/`);
         return response.status === 200;
     } catch (err) {
-        logger.error(`Python service unavailable: ${err.message}`);
+        logger.error(`Python service unavailable: ${err.code || ''} ${err.message || ''}`.trim());
         return false;
     }
 };
