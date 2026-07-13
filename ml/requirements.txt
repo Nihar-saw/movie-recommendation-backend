@@ -3,8 +3,6 @@ uvicorn
 pandas
 numpy<2
 scikit-learn
-scikit-surprise
 joblib
-scipy
 groq
 python-dotenv

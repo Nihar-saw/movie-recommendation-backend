@@ -1,11 +1,14 @@
 import os
 from groq import Groq
 
-# Initialize Groq client
-# Reads GROQ_API_KEY from environment variables
-client = Groq(api_key=os.getenv("GROQ_API_KEY"))
-
 def ask_movie_ai(prompt):
+    api_key = os.getenv("GROQ_API_KEY")
+    if not api_key:
+        raise ValueError("GROQ_API_KEY environment variable is not set")
+
+    # Lazy-initialize Groq client so missing key doesn't crash server at startup
+    client = Groq(api_key=api_key)
+
     completion = client.chat.completions.create(
         model="llama3-8b-8192",
         messages=[
