@@ -21,7 +21,7 @@ services:
         fromService:
           name: movie-recommendation-ml
           type: web
-          property: host
+          property: url
 
   # Python FastAPI ML Service
   - type: web

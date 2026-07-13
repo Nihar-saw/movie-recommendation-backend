@@ -20,7 +20,32 @@ const {
 
 const app = express();
 
-app.use(cors());
+app.use(
+  cors({
+    origin: function (origin, callback) {
+      // Allow requests with no origin (Postman, curl, mobile apps)
+      if (!origin) return callback(null, true);
+
+      const allowedPatterns = [
+        /^https:\/\/.*\.vercel\.app$/,          // all Vercel deployments
+        /^http:\/\/localhost:\d+$/,              // local dev
+        /^https?:\/\/127\.0\.0\.1:\d+$/,        // local dev alternate
+      ];
+
+      // Also allow explicit CLIENT_URL from env (e.g. custom domain)
+      if (process.env.CLIENT_URL && origin === process.env.CLIENT_URL) {
+        return callback(null, true);
+      }
+
+      if (allowedPatterns.some((pattern) => pattern.test(origin))) {
+        return callback(null, true);
+      }
+
+      return callback(new Error("Not allowed by CORS"));
+    },
+    credentials: true,
+  })
+);
 
 app.use(express.json());
 
