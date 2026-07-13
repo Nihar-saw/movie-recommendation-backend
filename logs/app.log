@@ -21,3 +21,15 @@ warn: ⚠ Python ML Service is unavailable. {"timestamp":"2026-07-11T16:52:39.50
 error: Python service unavailable: ECONNREFUSED {"timestamp":"2026-07-11T16:53:22.554Z"}
 warn: ⚠ Python ML Service is unavailable. {"timestamp":"2026-07-11T16:53:22.557Z"}
 info: Python service is managed independently. {"timestamp":"2026-07-11T16:57:28.462Z"}
+error: Python service unavailable: ECONNREFUSED {"timestamp":"2026-07-13T16:55:55.947Z"}
+warn: ⚠ Python ML Service is unavailable. {"timestamp":"2026-07-13T16:55:55.950Z"}
+error: Python service unavailable: ECONNREFUSED {"timestamp":"2026-07-13T17:03:40.292Z"}
+warn: ⚠ Python ML Service is unavailable. {"timestamp":"2026-07-13T17:03:40.293Z"}
+error: Python service unavailable: ECONNREFUSED {"timestamp":"2026-07-13T17:03:53.552Z"}
+warn: ⚠ Python ML Service is unavailable. {"timestamp":"2026-07-13T17:03:53.554Z"}
+error: Python service unavailable: ECONNREFUSED {"timestamp":"2026-07-13T17:10:18.256Z"}
+warn: ⚠ Python ML Service is unavailable. {"timestamp":"2026-07-13T17:10:18.260Z"}
+info: Python service is managed independently. {"timestamp":"2026-07-13T17:10:29.362Z"}
+error: Python service unavailable: ECONNREFUSED {"timestamp":"2026-07-13T17:10:33.636Z"}
+warn: ⚠ Python ML Service is unavailable. {"timestamp":"2026-07-13T17:10:33.638Z"}
+info: Python service is managed independently. {"timestamp":"2026-07-13T17:12:29.122Z"}
