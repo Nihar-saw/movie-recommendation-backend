@@ -24,6 +24,9 @@ const removeFavorite = async (userId, movieId) => {
 
     const user = await User.findById(userId);
 
+    if (!user)
+        throw new Error("User not found");
+
     user.favorites = user.favorites.filter(
         id => id !== Number(movieId)
     );
@@ -37,6 +40,9 @@ const addWatchlist = async (userId, movieId) => {
 
     const user = await User.findById(userId);
 
+    if (!user)
+        throw new Error("User not found");
+
     if (!user.watchlist.includes(movieId)) {
         user.watchlist.push(movieId);
     }
@@ -49,6 +55,9 @@ const addWatchlist = async (userId, movieId) => {
 const removeWatchlist = async (userId, movieId) => {
 
     const user = await User.findById(userId);
+
+    if (!user)
+        throw new Error("User not found");
 
     user.watchlist = user.watchlist.filter(
         id => id !== Number(movieId)

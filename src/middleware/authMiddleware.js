@@ -19,9 +19,18 @@ const protect = async (req, res, next) => {
                 process.env.JWT_SECRET
             );
 
-            req.user = await User.findById(decoded.id).select("-password");
+            const user = await User.findById(decoded.id).select("-password");
+            
+            if (!user) {
+                return res.status(401).json({
+                    success: false,
+                    message: "User not found"
+                });
+            }
 
-            next();
+            req.user = user;
+
+            return next();
 
         } catch (error) {
 
@@ -34,14 +43,10 @@ const protect = async (req, res, next) => {
 
     }
 
-    if (!token) {
-
-        return res.status(401).json({
-            success: false,
-            message: "Token Missing"
-        });
-
-    }
+    return res.status(401).json({
+        success: false,
+        message: "Token Missing"
+    });
 
 };
 

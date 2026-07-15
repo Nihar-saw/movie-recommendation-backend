@@ -1,10 +1,11 @@
-const { spawn } = require("child_process");
+const { spawn, spawnSync } = require("child_process");
 const axios = require("axios");
+const fs = require("fs");
 const path = require("path");
 const logger = require("../utils/logger");
 
 const PY_URL = process.env.PYTHON_SERVICE_URL || "http://127.0.0.1:8000";
-const ML_DIR = path.resolve(__dirname, "../../../ml");
+const ML_DIR = path.resolve(__dirname, "../../ml");
 
 let pythonProcess = null;
 
@@ -32,6 +33,46 @@ const waitForReady = async (maxWaitMs = 60000) => {
     return false;
 };
 
+const isPythonInterpreterReady = (command, args = []) => {
+    try {
+        const versionCheck = spawnSync(command, [...args, "--version"], {
+            stdio: "pipe",
+            env: process.env,
+            shell: false,
+        });
+        const versionErr = versionCheck.stderr ? versionCheck.stderr.toString().trim() : "";
+        if (versionCheck.status !== 0) {
+            logger.debug(`Interpreter ${command} version check failed: ${versionCheck.status}, stderr=${versionErr}`);
+            return false;
+        }
+
+        const importTest = [
+            "uvicorn",
+            "dotenv",
+            "fastapi",
+            "pandas",
+            "numpy",
+            "sklearn",
+            "joblib",
+            "groq",
+        ].map((mod) => `import ${mod}`).join("; ");
+
+        const loadCheck = spawnSync(command, [...args, "-c", importTest], {
+            stdio: "pipe",
+            env: process.env,
+            shell: false,
+        });
+        const loadErr = loadCheck.stderr ? loadCheck.stderr.toString().trim() : "";
+        if (loadCheck.status !== 0) {
+            logger.debug(`Interpreter ${command} import check failed: ${loadCheck.status}, stderr=${loadErr}`);
+        }
+        return loadCheck.status === 0;
+    } catch (err) {
+        logger.debug(`Interpreter ${command} readiness check threw: ${err.message}`);
+        return false;
+    }
+};
+
 const startPythonService = async () => {
     // Check if already running externally
     const alreadyRunning = await checkPythonService(1, 0);
@@ -42,19 +83,42 @@ const startPythonService = async () => {
 
     logger.info("🐍 Starting Python ML service...");
 
-    // Try to spawn using Python in the venv first, fallback to system python
     const venvPython = path.join(ML_DIR, "venv", "Scripts", "python.exe"); // Windows
     const venvPythonUnix = path.join(ML_DIR, "venv", "bin", "python");
+    const isWindows = process.platform === "win32";
 
-    let pythonCmd = "python";
-    const fs = require("fs");
+    const candidates = [];
     if (fs.existsSync(venvPython)) {
-        pythonCmd = venvPython;
-    } else if (fs.existsSync(venvPythonUnix)) {
-        pythonCmd = venvPythonUnix;
+        candidates.push({ cmd: venvPython, args: [] });
+    }
+    if (fs.existsSync(venvPythonUnix)) {
+        candidates.push({ cmd: venvPythonUnix, args: [] });
+    }
+    candidates.push({ cmd: "python", args: [] });
+    candidates.push({ cmd: "python3", args: [] });
+    if (isWindows) {
+        candidates.push({ cmd: "py", args: ["-3"] });
     }
 
-    const args = ["-m", "uvicorn", "api:app", "--host", "127.0.0.1", "--port", "8000", "--log-level", "warning"];
+    let pythonCmd;
+    let pythonArgsPrefix = [];
+    for (const candidate of candidates) {
+        if (isPythonInterpreterReady(candidate.cmd, candidate.args)) {
+            pythonCmd = candidate.cmd;
+            pythonArgsPrefix = candidate.args;
+            break;
+        }
+    }
+
+    if (!pythonCmd) {
+        logger.error("Failed to locate a usable Python interpreter with the required ML dependencies.");
+        logger.warn("Ensure Python is installed and the ML venv is set up in backend/ml/.");
+        logger.warn("If needed, run 'cd backend/ml && python -m pip install -r requirements.txt'.");
+        return;
+    }
+
+    const args = [...pythonArgsPrefix, "-m", "uvicorn", "api:app", "--host", "127.0.0.1", "--port", "8000", "--log-level", "warning"];
+    logger.info(`Using Python interpreter: ${pythonCmd}`);
 
     try {
         pythonProcess = spawn(pythonCmd, args, {

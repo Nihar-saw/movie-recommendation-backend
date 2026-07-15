@@ -1,4 +1,4 @@
-const axios = require("axios");
+﻿const axios = require("axios");
 
 const chatWithAI = async (req, res) => {
     try {
@@ -46,7 +46,7 @@ const chatWithAI = async (req, res) => {
             },
             {
                 headers: {
-                    "Authorization": `Bearer ${groqApiKey}`,
+                    Authorization: `Bearer ${groqApiKey}`,
                     "Content-Type": "application/json"
                 }
             }

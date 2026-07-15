@@ -1,6 +1,5 @@
 const axios = require("axios");
-
-const AI_URL = "http://127.0.0.1:8000";
+const { AI_URL } = require("../config/env");
 
 const getRecommendations = async (movieName) => {
 

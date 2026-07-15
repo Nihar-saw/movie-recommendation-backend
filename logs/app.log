@@ -83,3 +83,626 @@ info: 🐍 Starting Python ML service... {"timestamp":"2026-07-14T16:23:34.231Z"
 error: Failed to start Python ML service: spawn python ENOENT {"timestamp":"2026-07-14T16:23:34.238Z"}
 warn: Ensure Python is installed and the venv is set up in backend/ml/ {"timestamp":"2026-07-14T16:23:34.238Z"}
 info: ⏳ Waiting for Python ML service... (1/40) {"timestamp":"2026-07-14T16:23:35.752Z"}
+info: 🐍 Starting Python ML service... {"timestamp":"2026-07-15T04:44:07.903Z"}
+error: Failed to start Python ML service: spawn python ENOENT {"timestamp":"2026-07-15T04:44:07.926Z"}
+warn: Ensure Python is installed and the venv is set up in backend/ml/ {"timestamp":"2026-07-15T04:44:07.928Z"}
+info: ⏳ Waiting for Python ML service... (1/40) {"timestamp":"2026-07-15T04:44:09.442Z"}
+info: ⏳ Waiting for Python ML service... (2/40) {"timestamp":"2026-07-15T04:44:10.973Z"}
+info: ⏳ Waiting for Python ML service... (3/40) {"timestamp":"2026-07-15T04:44:12.512Z"}
+info: ⏳ Waiting for Python ML service... (4/40) {"timestamp":"2026-07-15T04:44:14.022Z"}
+info: ⏳ Waiting for Python ML service... (5/40) {"timestamp":"2026-07-15T04:44:15.530Z"}
+info: ⏳ Waiting for Python ML service... (6/40) {"timestamp":"2026-07-15T04:44:17.048Z"}
+info: ⏳ Waiting for Python ML service... (7/40) {"timestamp":"2026-07-15T04:44:18.571Z"}
+info: ⏳ Waiting for Python ML service... (8/40) {"timestamp":"2026-07-15T04:44:20.087Z"}
+info: ⏳ Waiting for Python ML service... (9/40) {"timestamp":"2026-07-15T04:44:21.604Z"}
+info: ⏳ Waiting for Python ML service... (10/40) {"timestamp":"2026-07-15T04:44:23.119Z"}
+info: ⏳ Waiting for Python ML service... (11/40) {"timestamp":"2026-07-15T04:44:24.635Z"}
+info: ⏳ Waiting for Python ML service... (12/40) {"timestamp":"2026-07-15T04:44:26.146Z"}
+info: ⏳ Waiting for Python ML service... (13/40) {"timestamp":"2026-07-15T04:44:27.663Z"}
+info: ⏳ Waiting for Python ML service... (14/40) {"timestamp":"2026-07-15T04:44:29.181Z"}
+info: ⏳ Waiting for Python ML service... (15/40) {"timestamp":"2026-07-15T04:44:30.701Z"}
+info: ⏳ Waiting for Python ML service... (16/40) {"timestamp":"2026-07-15T04:44:32.206Z"}
+info: ⏳ Waiting for Python ML service... (17/40) {"timestamp":"2026-07-15T04:44:33.720Z"}
+info: ⏳ Waiting for Python ML service... (18/40) {"timestamp":"2026-07-15T04:44:35.234Z"}
+info: ⏳ Waiting for Python ML service... (19/40) {"timestamp":"2026-07-15T04:44:36.751Z"}
+info: ⏳ Waiting for Python ML service... (20/40) {"timestamp":"2026-07-15T04:44:38.270Z"}
+info: ⏳ Waiting for Python ML service... (21/40) {"timestamp":"2026-07-15T04:44:39.785Z"}
+info: ⏳ Waiting for Python ML service... (22/40) {"timestamp":"2026-07-15T04:44:41.302Z"}
+info: ⏳ Waiting for Python ML service... (23/40) {"timestamp":"2026-07-15T04:44:42.817Z"}
+info: ⏳ Waiting for Python ML service... (24/40) {"timestamp":"2026-07-15T04:44:44.328Z"}
+info: ⏳ Waiting for Python ML service... (25/40) {"timestamp":"2026-07-15T04:44:45.860Z"}
+info: ⏳ Waiting for Python ML service... (26/40) {"timestamp":"2026-07-15T04:44:47.380Z"}
+info: ⏳ Waiting for Python ML service... (27/40) {"timestamp":"2026-07-15T04:44:48.899Z"}
+info: ⏳ Waiting for Python ML service... (28/40) {"timestamp":"2026-07-15T04:44:50.409Z"}
+info: ⏳ Waiting for Python ML service... (29/40) {"timestamp":"2026-07-15T04:44:51.916Z"}
+info: ⏳ Waiting for Python ML service... (30/40) {"timestamp":"2026-07-15T04:44:53.433Z"}
+info: ⏳ Waiting for Python ML service... (31/40) {"timestamp":"2026-07-15T04:44:54.949Z"}
+info: ⏳ Waiting for Python ML service... (32/40) {"timestamp":"2026-07-15T04:44:56.468Z"}
+info: ⏳ Waiting for Python ML service... (33/40) {"timestamp":"2026-07-15T04:44:57.988Z"}
+info: ⏳ Waiting for Python ML service... (34/40) {"timestamp":"2026-07-15T04:44:59.536Z"}
+info: ⏳ Waiting for Python ML service... (35/40) {"timestamp":"2026-07-15T04:45:01.049Z"}
+info: ⏳ Waiting for Python ML service... (36/40) {"timestamp":"2026-07-15T04:45:02.564Z"}
+info: ⏳ Waiting for Python ML service... (37/40) {"timestamp":"2026-07-15T04:45:04.083Z"}
+info: ⏳ Waiting for Python ML service... (38/40) {"timestamp":"2026-07-15T04:45:05.603Z"}
+info: ⏳ Waiting for Python ML service... (39/40) {"timestamp":"2026-07-15T04:45:07.194Z"}
+info: ⏳ Waiting for Python ML service... (40/40) {"timestamp":"2026-07-15T04:45:08.713Z"}
+warn: ⚠ Python ML Service did not respond in time. Recommendations may be unavailable. {"timestamp":"2026-07-15T04:45:08.714Z"}
+info: 🐍 Starting Python ML service... {"timestamp":"2026-07-15T04:52:21.507Z"}
+error: Failed to start Python ML service: spawn python ENOENT {"timestamp":"2026-07-15T04:52:21.517Z"}
+warn: Ensure Python is installed and the venv is set up in backend/ml/ {"timestamp":"2026-07-15T04:52:21.517Z"}
+info: ⏳ Waiting for Python ML service... (1/40) {"timestamp":"2026-07-15T04:52:23.021Z"}
+info: ⏳ Waiting for Python ML service... (2/40) {"timestamp":"2026-07-15T04:52:24.527Z"}
+info: ⏳ Waiting for Python ML service... (3/40) {"timestamp":"2026-07-15T04:52:26.031Z"}
+info: ⏳ Waiting for Python ML service... (4/40) {"timestamp":"2026-07-15T04:52:27.549Z"}
+info: ⏳ Waiting for Python ML service... (5/40) {"timestamp":"2026-07-15T04:52:29.063Z"}
+info: ⏳ Waiting for Python ML service... (6/40) {"timestamp":"2026-07-15T04:52:30.580Z"}
+info: ⏳ Waiting for Python ML service... (7/40) {"timestamp":"2026-07-15T04:52:32.088Z"}
+info: ⏳ Waiting for Python ML service... (8/40) {"timestamp":"2026-07-15T04:52:33.592Z"}
+info: ⏳ Waiting for Python ML service... (9/40) {"timestamp":"2026-07-15T04:52:35.100Z"}
+info: ⏳ Waiting for Python ML service... (10/40) {"timestamp":"2026-07-15T04:52:36.606Z"}
+info: ⏳ Waiting for Python ML service... (11/40) {"timestamp":"2026-07-15T04:52:38.115Z"}
+info: ⏳ Waiting for Python ML service... (12/40) {"timestamp":"2026-07-15T04:52:39.629Z"}
+info: ⏳ Waiting for Python ML service... (13/40) {"timestamp":"2026-07-15T04:52:41.139Z"}
+info: ⏳ Waiting for Python ML service... (14/40) {"timestamp":"2026-07-15T04:52:42.649Z"}
+info: ⏳ Waiting for Python ML service... (15/40) {"timestamp":"2026-07-15T04:52:44.157Z"}
+info: ⏳ Waiting for Python ML service... (16/40) {"timestamp":"2026-07-15T04:52:45.676Z"}
+info: ⏳ Waiting for Python ML service... (17/40) {"timestamp":"2026-07-15T04:52:47.182Z"}
+info: ⏳ Waiting for Python ML service... (18/40) {"timestamp":"2026-07-15T04:52:48.693Z"}
+info: ⏳ Waiting for Python ML service... (19/40) {"timestamp":"2026-07-15T04:52:50.199Z"}
+info: ⏳ Waiting for Python ML service... (20/40) {"timestamp":"2026-07-15T04:52:51.707Z"}
+info: ⏳ Waiting for Python ML service... (21/40) {"timestamp":"2026-07-15T04:52:53.223Z"}
+info: ⏳ Waiting for Python ML service... (22/40) {"timestamp":"2026-07-15T04:52:54.739Z"}
+info: ⏳ Waiting for Python ML service... (23/40) {"timestamp":"2026-07-15T04:52:56.255Z"}
+info: ⏳ Waiting for Python ML service... (24/40) {"timestamp":"2026-07-15T04:52:57.761Z"}
+info: ⏳ Waiting for Python ML service... (25/40) {"timestamp":"2026-07-15T04:52:59.274Z"}
+info: ⏳ Waiting for Python ML service... (26/40) {"timestamp":"2026-07-15T04:53:00.790Z"}
+info: ⏳ Waiting for Python ML service... (27/40) {"timestamp":"2026-07-15T04:53:02.307Z"}
+info: ⏳ Waiting for Python ML service... (28/40) {"timestamp":"2026-07-15T04:53:03.813Z"}
+info: ⏳ Waiting for Python ML service... (29/40) {"timestamp":"2026-07-15T04:53:05.332Z"}
+info: ⏳ Waiting for Python ML service... (30/40) {"timestamp":"2026-07-15T04:53:06.837Z"}
+info: ⏳ Waiting for Python ML service... (31/40) {"timestamp":"2026-07-15T04:53:08.355Z"}
+info: ⏳ Waiting for Python ML service... (32/40) {"timestamp":"2026-07-15T04:53:09.862Z"}
+info: ⏳ Waiting for Python ML service... (33/40) {"timestamp":"2026-07-15T04:53:11.374Z"}
+info: ⏳ Waiting for Python ML service... (34/40) {"timestamp":"2026-07-15T04:53:12.890Z"}
+info: ⏳ Waiting for Python ML service... (35/40) {"timestamp":"2026-07-15T04:53:14.405Z"}
+info: ⏳ Waiting for Python ML service... (36/40) {"timestamp":"2026-07-15T04:53:15.921Z"}
+info: ⏳ Waiting for Python ML service... (37/40) {"timestamp":"2026-07-15T04:53:17.436Z"}
+info: ⏳ Waiting for Python ML service... (38/40) {"timestamp":"2026-07-15T04:53:18.938Z"}
+info: ⏳ Waiting for Python ML service... (39/40) {"timestamp":"2026-07-15T04:53:20.442Z"}
+info: ⏳ Waiting for Python ML service... (40/40) {"timestamp":"2026-07-15T04:53:21.961Z"}
+warn: ⚠ Python ML Service did not respond in time. Recommendations may be unavailable. {"timestamp":"2026-07-15T04:53:21.962Z"}
+info: 🐍 Starting Python ML service... {"timestamp":"2026-07-15T04:57:09.333Z"}
+error: Failed to start Python ML service: spawn python ENOENT {"timestamp":"2026-07-15T04:57:09.394Z"}
+warn: Ensure Python is installed and the venv is set up in backend/ml/ {"timestamp":"2026-07-15T04:57:09.398Z"}
+info: ⏳ Waiting for Python ML service... (1/40) {"timestamp":"2026-07-15T04:57:10.953Z"}
+info: ⏳ Waiting for Python ML service... (2/40) {"timestamp":"2026-07-15T04:57:12.487Z"}
+info: ⏳ Waiting for Python ML service... (3/40) {"timestamp":"2026-07-15T04:57:14.000Z"}
+info: ⏳ Waiting for Python ML service... (4/40) {"timestamp":"2026-07-15T04:57:15.520Z"}
+info: ⏳ Waiting for Python ML service... (5/40) {"timestamp":"2026-07-15T04:57:17.043Z"}
+info: 🐍 Starting Python ML service... {"timestamp":"2026-07-15T04:57:20.255Z"}
+info: Using Python interpreter: python {"timestamp":"2026-07-15T04:57:20.334Z"}
+error: Failed to start Python ML service: spawn python ENOENT {"timestamp":"2026-07-15T04:57:20.345Z"}
+warn: Ensure Python is installed and the venv is set up in backend/ml/ {"timestamp":"2026-07-15T04:57:20.346Z"}
+info: ⏳ Waiting for Python ML service... (1/40) {"timestamp":"2026-07-15T04:57:21.857Z"}
+info: ⏳ Waiting for Python ML service... (2/40) {"timestamp":"2026-07-15T04:57:23.374Z"}
+info: ⏳ Waiting for Python ML service... (3/40) {"timestamp":"2026-07-15T04:57:24.888Z"}
+info: ⏳ Waiting for Python ML service... (4/40) {"timestamp":"2026-07-15T04:57:26.412Z"}
+info: ⏳ Waiting for Python ML service... (5/40) {"timestamp":"2026-07-15T04:57:27.923Z"}
+info: ⏳ Waiting for Python ML service... (6/40) {"timestamp":"2026-07-15T04:57:29.438Z"}
+info: ⏳ Waiting for Python ML service... (7/40) {"timestamp":"2026-07-15T04:57:30.955Z"}
+info: ⏳ Waiting for Python ML service... (8/40) {"timestamp":"2026-07-15T04:57:32.468Z"}
+info: ⏳ Waiting for Python ML service... (9/40) {"timestamp":"2026-07-15T04:57:33.985Z"}
+info: ⏳ Waiting for Python ML service... (10/40) {"timestamp":"2026-07-15T04:57:35.509Z"}
+info: ⏳ Waiting for Python ML service... (11/40) {"timestamp":"2026-07-15T04:57:37.031Z"}
+info: ⏳ Waiting for Python ML service... (12/40) {"timestamp":"2026-07-15T04:57:38.545Z"}
+info: ⏳ Waiting for Python ML service... (13/40) {"timestamp":"2026-07-15T04:57:40.062Z"}
+info: ⏳ Waiting for Python ML service... (14/40) {"timestamp":"2026-07-15T04:57:41.585Z"}
+info: ⏳ Waiting for Python ML service... (15/40) {"timestamp":"2026-07-15T04:57:43.100Z"}
+info: ⏳ Waiting for Python ML service... (16/40) {"timestamp":"2026-07-15T04:57:44.613Z"}
+info: ⏳ Waiting for Python ML service... (17/40) {"timestamp":"2026-07-15T04:57:46.142Z"}
+info: ⏳ Waiting for Python ML service... (18/40) {"timestamp":"2026-07-15T04:57:47.654Z"}
+info: ⏳ Waiting for Python ML service... (19/40) {"timestamp":"2026-07-15T04:57:49.169Z"}
+info: ⏳ Waiting for Python ML service... (20/40) {"timestamp":"2026-07-15T04:57:50.679Z"}
+info: ⏳ Waiting for Python ML service... (21/40) {"timestamp":"2026-07-15T04:57:52.189Z"}
+info: ⏳ Waiting for Python ML service... (22/40) {"timestamp":"2026-07-15T04:57:53.702Z"}
+info: ⏳ Waiting for Python ML service... (23/40) {"timestamp":"2026-07-15T04:57:55.221Z"}
+info: ⏳ Waiting for Python ML service... (24/40) {"timestamp":"2026-07-15T04:57:56.736Z"}
+info: ⏳ Waiting for Python ML service... (25/40) {"timestamp":"2026-07-15T04:57:58.251Z"}
+info: ⏳ Waiting for Python ML service... (26/40) {"timestamp":"2026-07-15T04:57:59.768Z"}
+info: ⏳ Waiting for Python ML service... (27/40) {"timestamp":"2026-07-15T04:58:01.288Z"}
+info: ⏳ Waiting for Python ML service... (28/40) {"timestamp":"2026-07-15T04:58:02.794Z"}
+info: ⏳ Waiting for Python ML service... (29/40) {"timestamp":"2026-07-15T04:58:04.309Z"}
+info: ⏳ Waiting for Python ML service... (30/40) {"timestamp":"2026-07-15T04:58:05.814Z"}
+info: ⏳ Waiting for Python ML service... (31/40) {"timestamp":"2026-07-15T04:58:07.327Z"}
+info: ⏳ Waiting for Python ML service... (32/40) {"timestamp":"2026-07-15T04:58:08.836Z"}
+info: ⏳ Waiting for Python ML service... (33/40) {"timestamp":"2026-07-15T04:58:10.343Z"}
+info: ⏳ Waiting for Python ML service... (34/40) {"timestamp":"2026-07-15T04:58:11.856Z"}
+info: ⏳ Waiting for Python ML service... (35/40) {"timestamp":"2026-07-15T04:58:13.374Z"}
+info: ⏳ Waiting for Python ML service... (36/40) {"timestamp":"2026-07-15T04:58:14.883Z"}
+info: ⏳ Waiting for Python ML service... (37/40) {"timestamp":"2026-07-15T04:58:16.399Z"}
+info: ⏳ Waiting for Python ML service... (38/40) {"timestamp":"2026-07-15T04:58:17.915Z"}
+info: ⏳ Waiting for Python ML service... (39/40) {"timestamp":"2026-07-15T04:58:19.435Z"}
+info: ⏳ Waiting for Python ML service... (40/40) {"timestamp":"2026-07-15T04:58:20.952Z"}
+warn: ⚠ Python ML Service did not respond in time. Recommendations may be unavailable. {"timestamp":"2026-07-15T04:58:20.953Z"}
+info: 🐍 Starting Python ML service... {"timestamp":"2026-07-15T04:59:32.018Z"}
+info: Using Python interpreter: python {"timestamp":"2026-07-15T04:59:32.086Z"}
+error: Failed to start Python ML service: spawn python ENOENT {"timestamp":"2026-07-15T04:59:32.101Z"}
+warn: Ensure Python is installed and the venv is set up in backend/ml/ {"timestamp":"2026-07-15T04:59:32.101Z"}
+info: ⏳ Waiting for Python ML service... (1/40) {"timestamp":"2026-07-15T04:59:33.612Z"}
+info: ⏳ Waiting for Python ML service... (2/40) {"timestamp":"2026-07-15T04:59:35.122Z"}
+info: ⏳ Waiting for Python ML service... (3/40) {"timestamp":"2026-07-15T04:59:36.640Z"}
+info: ⏳ Waiting for Python ML service... (4/40) {"timestamp":"2026-07-15T04:59:38.170Z"}
+info: ⏳ Waiting for Python ML service... (5/40) {"timestamp":"2026-07-15T04:59:39.688Z"}
+info: ⏳ Waiting for Python ML service... (6/40) {"timestamp":"2026-07-15T04:59:41.206Z"}
+info: ⏳ Waiting for Python ML service... (7/40) {"timestamp":"2026-07-15T04:59:42.743Z"}
+info: ⏳ Waiting for Python ML service... (8/40) {"timestamp":"2026-07-15T04:59:44.285Z"}
+info: ⏳ Waiting for Python ML service... (9/40) {"timestamp":"2026-07-15T04:59:45.831Z"}
+info: ⏳ Waiting for Python ML service... (10/40) {"timestamp":"2026-07-15T04:59:47.353Z"}
+info: ⏳ Waiting for Python ML service... (11/40) {"timestamp":"2026-07-15T04:59:48.871Z"}
+info: ⏳ Waiting for Python ML service... (12/40) {"timestamp":"2026-07-15T04:59:50.391Z"}
+info: ⏳ Waiting for Python ML service... (13/40) {"timestamp":"2026-07-15T04:59:51.911Z"}
+info: ⏳ Waiting for Python ML service... (14/40) {"timestamp":"2026-07-15T04:59:53.421Z"}
+info: ⏳ Waiting for Python ML service... (15/40) {"timestamp":"2026-07-15T04:59:54.950Z"}
+info: ⏳ Waiting for Python ML service... (16/40) {"timestamp":"2026-07-15T04:59:56.474Z"}
+info: ⏳ Waiting for Python ML service... (17/40) {"timestamp":"2026-07-15T04:59:58.009Z"}
+info: ⏳ Waiting for Python ML service... (18/40) {"timestamp":"2026-07-15T04:59:59.540Z"}
+info: ⏳ Waiting for Python ML service... (19/40) {"timestamp":"2026-07-15T05:00:01.054Z"}
+info: ⏳ Waiting for Python ML service... (20/40) {"timestamp":"2026-07-15T05:00:02.567Z"}
+info: ⏳ Waiting for Python ML service... (21/40) {"timestamp":"2026-07-15T05:00:04.077Z"}
+info: ⏳ Waiting for Python ML service... (22/40) {"timestamp":"2026-07-15T05:00:05.614Z"}
+info: ⏳ Waiting for Python ML service... (23/40) {"timestamp":"2026-07-15T05:00:07.123Z"}
+info: ⏳ Waiting for Python ML service... (24/40) {"timestamp":"2026-07-15T05:00:08.635Z"}
+info: ⏳ Waiting for Python ML service... (25/40) {"timestamp":"2026-07-15T05:00:10.147Z"}
+info: ⏳ Waiting for Python ML service... (26/40) {"timestamp":"2026-07-15T05:00:11.673Z"}
+info: ⏳ Waiting for Python ML service... (27/40) {"timestamp":"2026-07-15T05:00:13.190Z"}
+info: ⏳ Waiting for Python ML service... (28/40) {"timestamp":"2026-07-15T05:00:14.715Z"}
+info: ⏳ Waiting for Python ML service... (29/40) {"timestamp":"2026-07-15T05:00:16.246Z"}
+info: ⏳ Waiting for Python ML service... (30/40) {"timestamp":"2026-07-15T05:00:17.758Z"}
+info: ⏳ Waiting for Python ML service... (31/40) {"timestamp":"2026-07-15T05:00:19.283Z"}
+info: ⏳ Waiting for Python ML service... (32/40) {"timestamp":"2026-07-15T05:00:20.805Z"}
+info: ⏳ Waiting for Python ML service... (33/40) {"timestamp":"2026-07-15T05:00:22.328Z"}
+info: ⏳ Waiting for Python ML service... (34/40) {"timestamp":"2026-07-15T05:00:23.854Z"}
+info: ⏳ Waiting for Python ML service... (35/40) {"timestamp":"2026-07-15T05:00:25.377Z"}
+info: ⏳ Waiting for Python ML service... (36/40) {"timestamp":"2026-07-15T05:00:26.887Z"}
+info: ⏳ Waiting for Python ML service... (37/40) {"timestamp":"2026-07-15T05:00:28.401Z"}
+info: ⏳ Waiting for Python ML service... (38/40) {"timestamp":"2026-07-15T05:00:29.916Z"}
+info: ⏳ Waiting for Python ML service... (39/40) {"timestamp":"2026-07-15T05:00:31.430Z"}
+info: ⏳ Waiting for Python ML service... (40/40) {"timestamp":"2026-07-15T05:00:32.947Z"}
+warn: ⚠ Python ML Service did not respond in time. Recommendations may be unavailable. {"timestamp":"2026-07-15T05:00:32.948Z"}
+info: 🐍 Starting Python ML service... {"timestamp":"2026-07-15T05:01:41.201Z"}
+info: Using Python interpreter: C:\coding\movie recommendation system\backend\ml\venv\Scripts\python.exe {"timestamp":"2026-07-15T05:01:41.335Z"}
+warn: [Python ML] Traceback (most recent call last): {"timestamp":"2026-07-15T05:01:42.472Z"}
+warn: [Python ML] File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\coding\movie recommendation system\backend\ml\venv\Lib\site-packages\uvicorn\__main__.py", line 4, in <module>
+    uvicorn.main()
+    ~~~~~~~~~~~~^^
+  File "C:\coding\movie recommendation system\backend\ml\venv\Lib\site-packages\click\core.py", line 1569, in __call__
+    return self.main(*args, **kwargs)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\coding\movie recommendation system\backend\ml\venv\Lib\site-packages\click\core.py", line 1490, in main
+    rv = self.invoke(ctx)
+  File "C:\coding\movie recommendation system\backend\ml\venv\Lib\site-packages\click\core.py", line 1353, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\coding\movie recommendation system\backend\ml\venv\Lib\site-packages\click\core.py", line 907, in invoke
+    return callback(*args, **kwargs)
+  File "C:\coding\movie recommendation system\backend\ml\venv\Lib\site-packages\uvicorn\main.py", line 440, in main
+    run(
+    ~~~^
+        app,
+        ^^^^
+    ...<48 lines>...
+        reset_contextvars=reset_contextvars,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\coding\movie recommendation system\backend\ml\venv\Lib\site-packages\uvicorn\main.py", line 609, in run
+    config.load_app()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\coding\movie recommendation system\backend\ml\venv\Lib\site-packages\uvicorn\config.py", line 427, in load_app
+    return import_from_string(self.app)
+  File "C:\coding\movie recommendation system\backend\ml\venv\Lib\site-packages\uvicorn\importer.py", line 22, in import_from_string
+    raise exc from None
+  File "C:\coding\movie recommendation system\backend\ml\venv\Lib\site-packages\uvicorn\importer.py", line 19, in import_from_string
+    module = importlib.import_module(module_str)
+  File "C:\Users\Nihar\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 1026, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed {"timestamp":"2026-07-15T05:01:42.475Z"}
+warn: [Python ML] File "C:\coding\movie recommendation system\backend\ml\api.py", line 5, in <module>
+    from dotenv import load_dotenv
+ModuleNotFoundError: No module named 'dotenv' {"timestamp":"2026-07-15T05:01:42.476Z"}
+error: Python ML service exited with code 1 {"timestamp":"2026-07-15T05:01:42.578Z"}
+info: ⏳ Waiting for Python ML service... (1/40) {"timestamp":"2026-07-15T05:01:42.890Z"}
+info: ⏳ Waiting for Python ML service... (2/40) {"timestamp":"2026-07-15T05:01:44.542Z"}
+info: ⏳ Waiting for Python ML service... (3/40) {"timestamp":"2026-07-15T05:01:46.061Z"}
+info: ⏳ Waiting for Python ML service... (4/40) {"timestamp":"2026-07-15T05:01:47.581Z"}
+info: ⏳ Waiting for Python ML service... (5/40) {"timestamp":"2026-07-15T05:01:49.092Z"}
+info: ⏳ Waiting for Python ML service... (6/40) {"timestamp":"2026-07-15T05:01:50.608Z"}
+info: ⏳ Waiting for Python ML service... (7/40) {"timestamp":"2026-07-15T05:01:52.125Z"}
+info: ⏳ Waiting for Python ML service... (8/40) {"timestamp":"2026-07-15T05:01:53.647Z"}
+info: ⏳ Waiting for Python ML service... (9/40) {"timestamp":"2026-07-15T05:01:55.172Z"}
+info: ⏳ Waiting for Python ML service... (10/40) {"timestamp":"2026-07-15T05:01:56.704Z"}
+info: ⏳ Waiting for Python ML service... (11/40) {"timestamp":"2026-07-15T05:01:58.216Z"}
+info: ⏳ Waiting for Python ML service... (12/40) {"timestamp":"2026-07-15T05:01:59.730Z"}
+info: ⏳ Waiting for Python ML service... (13/40) {"timestamp":"2026-07-15T05:02:01.296Z"}
+info: ⏳ Waiting for Python ML service... (14/40) {"timestamp":"2026-07-15T05:02:02.810Z"}
+info: ⏳ Waiting for Python ML service... (15/40) {"timestamp":"2026-07-15T05:02:04.329Z"}
+info: ⏳ Waiting for Python ML service... (16/40) {"timestamp":"2026-07-15T05:02:05.844Z"}
+info: ⏳ Waiting for Python ML service... (17/40) {"timestamp":"2026-07-15T05:02:07.367Z"}
+info: ⏳ Waiting for Python ML service... (18/40) {"timestamp":"2026-07-15T05:02:08.900Z"}
+info: ⏳ Waiting for Python ML service... (19/40) {"timestamp":"2026-07-15T05:02:10.424Z"}
+info: ⏳ Waiting for Python ML service... (20/40) {"timestamp":"2026-07-15T05:02:11.944Z"}
+info: ⏳ Waiting for Python ML service... (21/40) {"timestamp":"2026-07-15T05:02:13.456Z"}
+info: ⏳ Waiting for Python ML service... (22/40) {"timestamp":"2026-07-15T05:02:14.970Z"}
+info: ⏳ Waiting for Python ML service... (23/40) {"timestamp":"2026-07-15T05:02:16.546Z"}
+info: ⏳ Waiting for Python ML service... (24/40) {"timestamp":"2026-07-15T05:02:18.057Z"}
+info: ⏳ Waiting for Python ML service... (25/40) {"timestamp":"2026-07-15T05:02:19.571Z"}
+info: ⏳ Waiting for Python ML service... (26/40) {"timestamp":"2026-07-15T05:02:21.087Z"}
+info: ⏳ Waiting for Python ML service... (27/40) {"timestamp":"2026-07-15T05:02:22.604Z"}
+info: ⏳ Waiting for Python ML service... (28/40) {"timestamp":"2026-07-15T05:02:24.129Z"}
+info: ⏳ Waiting for Python ML service... (29/40) {"timestamp":"2026-07-15T05:02:25.657Z"}
+info: ⏳ Waiting for Python ML service... (30/40) {"timestamp":"2026-07-15T05:02:27.174Z"}
+info: ⏳ Waiting for Python ML service... (31/40) {"timestamp":"2026-07-15T05:02:28.686Z"}
+info: ⏳ Waiting for Python ML service... (32/40) {"timestamp":"2026-07-15T05:02:30.204Z"}
+info: ⏳ Waiting for Python ML service... (33/40) {"timestamp":"2026-07-15T05:02:31.728Z"}
+info: ⏳ Waiting for Python ML service... (34/40) {"timestamp":"2026-07-15T05:02:33.241Z"}
+info: ⏳ Waiting for Python ML service... (35/40) {"timestamp":"2026-07-15T05:02:34.756Z"}
+info: ⏳ Waiting for Python ML service... (36/40) {"timestamp":"2026-07-15T05:02:36.270Z"}
+info: ⏳ Waiting for Python ML service... (37/40) {"timestamp":"2026-07-15T05:02:37.781Z"}
+info: ⏳ Waiting for Python ML service... (38/40) {"timestamp":"2026-07-15T05:02:39.298Z"}
+info: ⏳ Waiting for Python ML service... (39/40) {"timestamp":"2026-07-15T05:02:40.816Z"}
+info: ⏳ Waiting for Python ML service... (40/40) {"timestamp":"2026-07-15T05:02:42.333Z"}
+warn: ⚠ Python ML Service did not respond in time. Recommendations may be unavailable. {"timestamp":"2026-07-15T05:02:42.334Z"}
+info: 🐍 Starting Python ML service... {"timestamp":"2026-07-15T05:04:39.241Z"}
+info: Using Python interpreter: C:\coding\movie recommendation system\backend\ml\venv\Scripts\python.exe {"timestamp":"2026-07-15T05:04:39.390Z"}
+warn: [Python ML] Traceback (most recent call last): {"timestamp":"2026-07-15T05:04:40.716Z"}
+warn: [Python ML] File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\coding\movie recommendation system\backend\ml\venv\Lib\site-packages\uvicorn\__main__.py", line 4, in <module>
+    uvicorn.main()
+    ~~~~~~~~~~~~^^
+  File "C:\coding\movie recommendation system\backend\ml\venv\Lib\site-packages\click\core.py", line 1569, in __call__
+    return self.main(*args, **kwargs)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\coding\movie recommendation system\backend\ml\venv\Lib\site-packages\click\core.py", line 1490, in main
+    rv = self.invoke(ctx)
+  File "C:\coding\movie recommendation system\backend\ml\venv\Lib\site-packages\click\core.py", line 1353, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\coding\movie recommendation system\backend\ml\venv\Lib\site-packages\click\core.py", line 907, in invoke
+    return callback(*args, **kwargs) {"timestamp":"2026-07-15T05:04:40.720Z"}
+warn: [Python ML] File "C:\coding\movie recommendation system\backend\ml\venv\Lib\site-packages\uvicorn\main.py", line 440, in main
+    run(
+    ~~~^
+        app,
+        ^^^^
+    ...<48 lines>...
+        reset_contextvars=reset_contextvars,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\coding\movie recommendation system\backend\ml\venv\Lib\site-packages\uvicorn\main.py", line 609, in run
+    config.load_app()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\coding\movie recommendation system\backend\ml\venv\Lib\site-packages\uvicorn\config.py", line 427, in load_app
+    return import_from_string(self.app)
+  File "C:\coding\movie recommendation system\backend\ml\venv\Lib\site-packages\uvicorn\importer.py", line 22, in import_from_string
+    raise exc from None
+  File "C:\coding\movie recommendation system\backend\ml\venv\Lib\site-packages\uvicorn\importer.py", line 19, in import_from_string
+    module = importlib.import_module(module_str)
+  File "C:\Users\Nihar\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 1026, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\coding\movie recommendation system\backend\ml\api.py", line 5, in <module>
+    from dotenv import load_dotenv
+ModuleNotFoundError: No module named 'dotenv' {"timestamp":"2026-07-15T05:04:40.722Z"}
+error: Python ML service exited with code 1 {"timestamp":"2026-07-15T05:04:40.982Z"}
+info: ⏳ Waiting for Python ML service... (1/40) {"timestamp":"2026-07-15T05:04:41.075Z"}
+info: ⏳ Waiting for Python ML service... (2/40) {"timestamp":"2026-07-15T05:04:42.602Z"}
+info: ⏳ Waiting for Python ML service... (3/40) {"timestamp":"2026-07-15T05:04:44.127Z"}
+info: ⏳ Waiting for Python ML service... (4/40) {"timestamp":"2026-07-15T05:04:45.660Z"}
+info: ⏳ Waiting for Python ML service... (5/40) {"timestamp":"2026-07-15T05:04:47.199Z"}
+info: ⏳ Waiting for Python ML service... (6/40) {"timestamp":"2026-07-15T05:04:48.720Z"}
+info: ⏳ Waiting for Python ML service... (7/40) {"timestamp":"2026-07-15T05:04:50.239Z"}
+info: ⏳ Waiting for Python ML service... (8/40) {"timestamp":"2026-07-15T05:04:51.767Z"}
+info: ⏳ Waiting for Python ML service... (9/40) {"timestamp":"2026-07-15T05:04:53.288Z"}
+info: ⏳ Waiting for Python ML service... (10/40) {"timestamp":"2026-07-15T05:04:54.807Z"}
+info: ⏳ Waiting for Python ML service... (11/40) {"timestamp":"2026-07-15T05:04:56.341Z"}
+info: ⏳ Waiting for Python ML service... (12/40) {"timestamp":"2026-07-15T05:04:57.869Z"}
+info: ⏳ Waiting for Python ML service... (13/40) {"timestamp":"2026-07-15T05:04:59.384Z"}
+info: ⏳ Waiting for Python ML service... (14/40) {"timestamp":"2026-07-15T05:05:00.889Z"}
+info: ⏳ Waiting for Python ML service... (15/40) {"timestamp":"2026-07-15T05:05:02.394Z"}
+info: ⏳ Waiting for Python ML service... (16/40) {"timestamp":"2026-07-15T05:05:03.917Z"}
+info: ⏳ Waiting for Python ML service... (17/40) {"timestamp":"2026-07-15T05:05:05.432Z"}
+info: ⏳ Waiting for Python ML service... (18/40) {"timestamp":"2026-07-15T05:05:06.957Z"}
+info: ⏳ Waiting for Python ML service... (19/40) {"timestamp":"2026-07-15T05:05:08.461Z"}
+info: ⏳ Waiting for Python ML service... (20/40) {"timestamp":"2026-07-15T05:05:09.979Z"}
+info: ⏳ Waiting for Python ML service... (21/40) {"timestamp":"2026-07-15T05:05:11.492Z"}
+info: ⏳ Waiting for Python ML service... (22/40) {"timestamp":"2026-07-15T05:05:13.014Z"}
+info: ⏳ Waiting for Python ML service... (23/40) {"timestamp":"2026-07-15T05:05:14.532Z"}
+info: ⏳ Waiting for Python ML service... (24/40) {"timestamp":"2026-07-15T05:05:16.050Z"}
+info: ⏳ Waiting for Python ML service... (25/40) {"timestamp":"2026-07-15T05:05:17.560Z"}
+info: ⏳ Waiting for Python ML service... (26/40) {"timestamp":"2026-07-15T05:05:19.071Z"}
+info: ⏳ Waiting for Python ML service... (27/40) {"timestamp":"2026-07-15T05:05:20.582Z"}
+info: ⏳ Waiting for Python ML service... (28/40) {"timestamp":"2026-07-15T05:05:22.087Z"}
+info: ⏳ Waiting for Python ML service... (29/40) {"timestamp":"2026-07-15T05:05:23.605Z"}
+info: ⏳ Waiting for Python ML service... (30/40) {"timestamp":"2026-07-15T05:05:25.114Z"}
+info: ⏳ Waiting for Python ML service... (31/40) {"timestamp":"2026-07-15T05:05:26.621Z"}
+info: ⏳ Waiting for Python ML service... (32/40) {"timestamp":"2026-07-15T05:05:28.127Z"}
+info: ⏳ Waiting for Python ML service... (33/40) {"timestamp":"2026-07-15T05:05:29.650Z"}
+info: ⏳ Waiting for Python ML service... (34/40) {"timestamp":"2026-07-15T05:05:31.158Z"}
+info: ⏳ Waiting for Python ML service... (35/40) {"timestamp":"2026-07-15T05:05:32.672Z"}
+info: ⏳ Waiting for Python ML service... (36/40) {"timestamp":"2026-07-15T05:05:34.195Z"}
+info: ⏳ Waiting for Python ML service... (37/40) {"timestamp":"2026-07-15T05:05:35.707Z"}
+info: ⏳ Waiting for Python ML service... (38/40) {"timestamp":"2026-07-15T05:05:37.228Z"}
+info: ⏳ Waiting for Python ML service... (39/40) {"timestamp":"2026-07-15T05:05:38.742Z"}
+info: ⏳ Waiting for Python ML service... (40/40) {"timestamp":"2026-07-15T05:05:40.252Z"}
+warn: ⚠ Python ML Service did not respond in time. Recommendations may be unavailable. {"timestamp":"2026-07-15T05:05:40.252Z"}
+info: 🐍 Starting Python ML service... {"timestamp":"2026-07-15T05:06:07.606Z"}
+info: Using Python interpreter: C:\coding\movie recommendation system\backend\ml\venv\Scripts\python.exe {"timestamp":"2026-07-15T05:06:07.674Z"}
+warn: [Python ML] Traceback (most recent call last): {"timestamp":"2026-07-15T05:06:08.508Z"}
+warn: [Python ML] File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\coding\movie recommendation system\backend\ml\venv\Lib\site-packages\uvicorn\__main__.py", line 4, in <module>
+    uvicorn.main()
+    ~~~~~~~~~~~~^^ {"timestamp":"2026-07-15T05:06:08.511Z"}
+warn: [Python ML] File "C:\coding\movie recommendation system\backend\ml\venv\Lib\site-packages\click\core.py", line 1569, in __call__
+    return self.main(*args, **kwargs)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\coding\movie recommendation system\backend\ml\venv\Lib\site-packages\click\core.py", line 1490, in main
+    rv = self.invoke(ctx)
+  File "C:\coding\movie recommendation system\backend\ml\venv\Lib\site-packages\click\core.py", line 1353, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\coding\movie recommendation system\backend\ml\venv\Lib\site-packages\click\core.py", line 907, in invoke
+    return callback(*args, **kwargs)
+  File "C:\coding\movie recommendation system\backend\ml\venv\Lib\site-packages\uvicorn\main.py", line 440, in main
+    run(
+    ~~~^
+        app,
+        ^^^^
+    ...<48 lines>...
+        reset_contextvars=reset_contextvars,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\coding\movie recommendation system\backend\ml\venv\Lib\site-packages\uvicorn\main.py", line 609, in run
+    config.load_app()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\coding\movie recommendation system\backend\ml\venv\Lib\site-packages\uvicorn\config.py", line 427, in load_app
+    return import_from_string(self.app)
+  File "C:\coding\movie recommendation system\backend\ml\venv\Lib\site-packages\uvicorn\importer.py", line 22, in import_from_string
+    raise exc from None
+  File "C:\coding\movie recommendation system\backend\ml\venv\Lib\site-packages\uvicorn\importer.py", line 19, in import_from_string
+    module = importlib.import_module(module_str)
+  File "C:\Users\Nihar\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 1026, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\coding\movie recommendation system\backend\ml\api.py", line 5, in <module>
+    from dotenv import load_dotenv
+ModuleNotFoundError: No module named 'dotenv' {"timestamp":"2026-07-15T05:06:08.511Z"}
+error: Python ML service exited with code 1 {"timestamp":"2026-07-15T05:06:08.572Z"}
+info: 🐍 Starting Python ML service... {"timestamp":"2026-07-15T05:14:15.825Z"}
+info: 🐍 Starting Python ML service... {"timestamp":"2026-07-15T05:14:26.108Z"}
+error: Failed to locate a usable Python interpreter. {"timestamp":"2026-07-15T05:14:26.465Z"}
+warn: Ensure Python is installed and the venv is set up in backend/ml/ {"timestamp":"2026-07-15T05:14:26.465Z"}
+info: 🐍 Starting Python ML service... {"timestamp":"2026-07-15T05:14:35.259Z"}
+error: Failed to locate a usable Python interpreter with the required ML dependencies. {"timestamp":"2026-07-15T05:14:35.665Z"}
+warn: Ensure Python is installed and the ML venv is set up in backend/ml/. {"timestamp":"2026-07-15T05:14:35.665Z"}
+warn: If needed, run 'cd backend/ml && python -m pip install -r requirements.txt'. {"timestamp":"2026-07-15T05:14:35.666Z"}
+info: 🐍 Starting Python ML service... {"timestamp":"2026-07-15T05:15:09.143Z"}
+error: Failed to locate a usable Python interpreter with the required ML dependencies. {"timestamp":"2026-07-15T05:15:09.600Z"}
+warn: Ensure Python is installed and the ML venv is set up in backend/ml/. {"timestamp":"2026-07-15T05:15:09.600Z"}
+warn: If needed, run 'cd backend/ml && python -m pip install -r requirements.txt'. {"timestamp":"2026-07-15T05:15:09.600Z"}
+info: 🐍 Starting Python ML service... {"timestamp":"2026-07-15T05:18:21.132Z"}
+info: Checking candidate: C:\coding\movie recommendation system\backend\ml\venv\Scripts\python.exe  {"timestamp":"2026-07-15T05:18:21.134Z"}
+info: Candidate ready: C:\coding\movie recommendation system\backend\ml\venv\Scripts\python.exe -> false {"timestamp":"2026-07-15T05:18:21.280Z"}
+info: Checking candidate: python  {"timestamp":"2026-07-15T05:18:21.280Z"}
+info: Candidate ready: python -> false {"timestamp":"2026-07-15T05:18:21.383Z"}
+info: Checking candidate: python3  {"timestamp":"2026-07-15T05:18:21.383Z"}
+info: Candidate ready: python3 -> false {"timestamp":"2026-07-15T05:18:21.385Z"}
+info: Checking candidate: py -3 {"timestamp":"2026-07-15T05:18:21.385Z"}
+info: Candidate ready: py -> false {"timestamp":"2026-07-15T05:18:21.570Z"}
+error: Failed to locate a usable Python interpreter with the required ML dependencies. {"timestamp":"2026-07-15T05:18:21.571Z"}
+warn: Ensure Python is installed and the ML venv is set up in backend/ml/. {"timestamp":"2026-07-15T05:18:21.571Z"}
+warn: If needed, run 'cd backend/ml && python -m pip install -r requirements.txt'. {"timestamp":"2026-07-15T05:18:21.571Z"}
+info: 🐍 Starting Python ML service... {"timestamp":"2026-07-15T05:18:38.282Z"}
+info: Checking candidate: C:\coding\movie recommendation system\backend\ml\venv\Scripts\python.exe  {"timestamp":"2026-07-15T05:18:38.284Z"}
+info: Interpreter C:\coding\movie recommendation system\backend\ml\venv\Scripts\python.exe import check failed: 1, stderr=Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+    uvicorn; dotenv; fastapi; pandas; numpy; sklearn; joblib; groq
+    ^^^^^^^
+NameError: name 'uvicorn' is not defined {"timestamp":"2026-07-15T05:18:38.508Z"}
+info: Candidate ready: C:\coding\movie recommendation system\backend\ml\venv\Scripts\python.exe -> false {"timestamp":"2026-07-15T05:18:38.509Z"}
+info: Checking candidate: python  {"timestamp":"2026-07-15T05:18:38.509Z"}
+info: Interpreter python import check failed: 1, stderr=Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+    uvicorn; dotenv; fastapi; pandas; numpy; sklearn; joblib; groq
+    ^^^^^^^
+NameError: name 'uvicorn' is not defined {"timestamp":"2026-07-15T05:18:38.655Z"}
+info: Candidate ready: python -> false {"timestamp":"2026-07-15T05:18:38.655Z"}
+info: Checking candidate: python3  {"timestamp":"2026-07-15T05:18:38.655Z"}
+info: Interpreter python3 readiness check threw: Cannot read properties of undefined (reading 'toString') {"timestamp":"2026-07-15T05:18:38.657Z"}
+info: Candidate ready: python3 -> false {"timestamp":"2026-07-15T05:18:38.657Z"}
+info: Checking candidate: py -3 {"timestamp":"2026-07-15T05:18:38.657Z"}
+info: Interpreter py import check failed: 1, stderr=Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+    uvicorn; dotenv; fastapi; pandas; numpy; sklearn; joblib; groq
+    ^^^^^^^
+NameError: name 'uvicorn' is not defined {"timestamp":"2026-07-15T05:18:38.906Z"}
+info: Candidate ready: py -> false {"timestamp":"2026-07-15T05:18:38.907Z"}
+error: Failed to locate a usable Python interpreter with the required ML dependencies. {"timestamp":"2026-07-15T05:18:38.907Z"}
+warn: Ensure Python is installed and the ML venv is set up in backend/ml/. {"timestamp":"2026-07-15T05:18:38.907Z"}
+warn: If needed, run 'cd backend/ml && python -m pip install -r requirements.txt'. {"timestamp":"2026-07-15T05:18:38.907Z"}
+info: 🐍 Starting Python ML service... {"timestamp":"2026-07-15T05:20:29.210Z"}
+info: Checking candidate: C:\coding\movie recommendation system\backend\ml\venv\Scripts\python.exe  {"timestamp":"2026-07-15T05:20:29.212Z"}
+info: Interpreter C:\coding\movie recommendation system\backend\ml\venv\Scripts\python.exe import check failed: 1, stderr=Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+    import uvicorn; import dotenv; import fastapi; import pandas; import numpy; import sklearn; import joblib; import groq
+                    ^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'dotenv' {"timestamp":"2026-07-15T05:20:29.526Z"}
+info: Candidate ready: C:\coding\movie recommendation system\backend\ml\venv\Scripts\python.exe -> false {"timestamp":"2026-07-15T05:20:29.526Z"}
+info: Checking candidate: python  {"timestamp":"2026-07-15T05:20:29.526Z"}
+info: Candidate ready: python -> true {"timestamp":"2026-07-15T05:20:32.345Z"}
+info: Using Python interpreter: python {"timestamp":"2026-07-15T05:20:32.346Z"}
+info: ⏳ Waiting for Python ML service... (1/40) {"timestamp":"2026-07-15T05:20:33.893Z"}
+info: 🐍 Starting Python ML service... {"timestamp":"2026-07-15T05:20:36.525Z"}
+info: Checking candidate: C:\coding\movie recommendation system\backend\ml\venv\Scripts\python.exe  {"timestamp":"2026-07-15T05:20:36.527Z"}
+info: Interpreter C:\coding\movie recommendation system\backend\ml\venv\Scripts\python.exe import check failed: 1, stderr=Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+    import uvicorn; import dotenv; import fastapi; import pandas; import numpy; import sklearn; import joblib; import groq
+                    ^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'dotenv' {"timestamp":"2026-07-15T05:20:36.839Z"}
+info: Candidate ready: C:\coding\movie recommendation system\backend\ml\venv\Scripts\python.exe -> false {"timestamp":"2026-07-15T05:20:36.839Z"}
+info: Checking candidate: python  {"timestamp":"2026-07-15T05:20:36.840Z"}
+info: Candidate ready: python -> true {"timestamp":"2026-07-15T05:20:39.656Z"}
+info: Using Python interpreter: python {"timestamp":"2026-07-15T05:20:39.657Z"}
+info: ⏳ Waiting for Python ML service... (1/40) {"timestamp":"2026-07-15T05:20:41.175Z"}
+info: 🐍 Starting Python ML service... {"timestamp":"2026-07-15T05:20:44.010Z"}
+info: Interpreter C:\coding\movie recommendation system\backend\ml\venv\Scripts\python.exe import check failed: 1, stderr=Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+    import uvicorn; import dotenv; import fastapi; import pandas; import numpy; import sklearn; import joblib; import groq
+                    ^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'dotenv' {"timestamp":"2026-07-15T05:20:44.254Z"}
+info: Using Python interpreter: python {"timestamp":"2026-07-15T05:20:47.247Z"}
+info: ⏳ Waiting for Python ML service... (1/40) {"timestamp":"2026-07-15T05:20:48.769Z"}
+info: 🐍 Python ML Service is ready. {"timestamp":"2026-07-15T05:20:50.301Z"}
+info: 🐍 Starting Python ML service... {"timestamp":"2026-07-15T05:22:29.984Z"}
+info: 🐍 Starting Python ML service... {"timestamp":"2026-07-15T05:22:30.106Z"}
+info: Interpreter C:\coding\movie recommendation system\backend\ml\venv\Scripts\python.exe import check failed: 1, stderr=Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+    import uvicorn; import dotenv; import fastapi; import pandas; import numpy; import sklearn; import joblib; import groq
+                    ^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'dotenv' {"timestamp":"2026-07-15T05:22:30.407Z"}
+info: Using Python interpreter: python {"timestamp":"2026-07-15T05:22:33.124Z"}
+info: Interpreter C:\coding\movie recommendation system\backend\ml\venv\Scripts\python.exe import check failed: 1, stderr=Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+    import uvicorn; import dotenv; import fastapi; import pandas; import numpy; import sklearn; import joblib; import groq
+                    ^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'dotenv' {"timestamp":"2026-07-15T05:22:30.286Z"}
+info: Using Python interpreter: python {"timestamp":"2026-07-15T05:22:33.125Z"}
+info: ⏳ Waiting for Python ML service... (1/40) {"timestamp":"2026-07-15T05:22:34.644Z"}
+info: ⏳ Waiting for Python ML service... (1/40) {"timestamp":"2026-07-15T05:22:34.653Z"}
+warn: [Python ML] ERROR:    [Errno 10048] error while attempting to bind on address ('127.0.0.1', 8000): [winerror 10048] only one usage of each socket address (protocol/network address/port) is normally permitted {"timestamp":"2026-07-15T05:22:35.862Z"}
+info: [Python ML] Checking ML models...
+All required models exist. Skipping training.
+Loading models...
+ML Service Ready. {"timestamp":"2026-07-15T05:22:35.862Z"}
+info: 🐍 Python ML Service is ready. {"timestamp":"2026-07-15T05:22:36.193Z"}
+info: 🐍 Python ML Service is ready. {"timestamp":"2026-07-15T05:22:36.186Z"}
+error: Python ML service exited with code 3 {"timestamp":"2026-07-15T05:22:36.405Z"}
+info: 🐍 Starting Python ML service... {"timestamp":"2026-07-15T05:22:38.752Z"}
+info: 🐍 Starting Python ML service... {"timestamp":"2026-07-15T05:22:39.034Z"}
+info: Using Python interpreter: python {"timestamp":"2026-07-15T05:22:41.669Z"}
+info: Using Python interpreter: python {"timestamp":"2026-07-15T05:22:42.059Z"}
+info: ⏳ Waiting for Python ML service... (1/40) {"timestamp":"2026-07-15T05:22:43.193Z"}
+info: ⏳ Waiting for Python ML service... (1/40) {"timestamp":"2026-07-15T05:22:43.589Z"}
+info: 🐍 Starting Python ML service... {"timestamp":"2026-07-15T05:22:45.824Z"}
+info: 🐍 Starting Python ML service... {"timestamp":"2026-07-15T05:22:46.144Z"}
+info: Using Python interpreter: python {"timestamp":"2026-07-15T05:22:48.788Z"}
+info: Using Python interpreter: python {"timestamp":"2026-07-15T05:22:49.225Z"}
+info: ⏳ Waiting for Python ML service... (1/40) {"timestamp":"2026-07-15T05:22:50.322Z"}
+info: ⏳ Waiting for Python ML service... (1/40) {"timestamp":"2026-07-15T05:22:50.754Z"}
+warn: [Python ML] ERROR:    [Errno 10048] error while attempting to bind on address ('127.0.0.1', 8000): [winerror 10048] only one usage of each socket address (protocol/network address/port) is normally permitted {"timestamp":"2026-07-15T05:22:51.554Z"}
+info: [Python ML] Checking ML models...
+All required models exist. Skipping training.
+Loading models...
+ML Service Ready. {"timestamp":"2026-07-15T05:22:51.555Z"}
+info: 🐍 Python ML Service is ready. {"timestamp":"2026-07-15T05:22:51.845Z"}
+error: Python ML service exited with code 3 {"timestamp":"2026-07-15T05:22:51.911Z"}
+info: 🐍 Python ML Service is ready. {"timestamp":"2026-07-15T05:22:52.274Z"}
+error: Python ML service exited with code 4294967295 {"timestamp":"2026-07-15T05:23:57.959Z"}
+info: 🐍 Starting Python ML service... {"timestamp":"2026-07-15T05:35:09.604Z"}
+info: Using Python interpreter: python {"timestamp":"2026-07-15T05:35:15.458Z"}
+info: ⏳ Waiting for Python ML service... (1/40) {"timestamp":"2026-07-15T05:35:16.999Z"}
+info: ⏳ Waiting for Python ML service... (2/40) {"timestamp":"2026-07-15T05:35:18.507Z"}
+info: ⏳ Waiting for Python ML service... (3/40) {"timestamp":"2026-07-15T05:35:20.018Z"}
+info: ⏳ Waiting for Python ML service... (4/40) {"timestamp":"2026-07-15T05:35:21.680Z"}
+info: 🐍 Python ML Service is ready. {"timestamp":"2026-07-15T05:35:23.213Z"}
+info: 🐍 Starting Python ML service... {"timestamp":"2026-07-15T05:35:34.862Z"}
+info: Using Python interpreter: python {"timestamp":"2026-07-15T05:35:38.259Z"}
+info: ⏳ Waiting for Python ML service... (1/40) {"timestamp":"2026-07-15T05:35:39.834Z"}
+info: 🐍 Python ML Service is ready. {"timestamp":"2026-07-15T05:35:41.404Z"}
+info: 🐍 Starting Python ML service... {"timestamp":"2026-07-15T05:36:40.507Z"}
+info: Using Python interpreter: python {"timestamp":"2026-07-15T05:36:54.076Z"}
+info: ⏳ Waiting for Python ML service... (1/40) {"timestamp":"2026-07-15T05:36:55.635Z"}
+info: ⏳ Waiting for Python ML service... (2/40) {"timestamp":"2026-07-15T05:36:57.151Z"}
+info: ⏳ Waiting for Python ML service... (3/40) {"timestamp":"2026-07-15T05:36:58.663Z"}
+info: 🐍 Python ML Service is ready. {"timestamp":"2026-07-15T05:37:00.243Z"}
+info: 🐍 Starting Python ML service... {"timestamp":"2026-07-15T06:03:19.946Z"}
+info: Using Python interpreter: python {"timestamp":"2026-07-15T06:03:23.294Z"}
+info: ⏳ Waiting for Python ML service... (1/40) {"timestamp":"2026-07-15T06:03:24.833Z"}
+info: ⏳ Waiting for Python ML service... (2/40) {"timestamp":"2026-07-15T06:03:26.349Z"}
+info: 🐍 Python ML Service is ready. {"timestamp":"2026-07-15T06:03:27.884Z"}
+info: 🐍 Starting Python ML service... {"timestamp":"2026-07-15T06:07:15.642Z"}
+info: Using Python interpreter: python {"timestamp":"2026-07-15T06:07:19.343Z"}
+info: ⏳ Waiting for Python ML service... (1/40) {"timestamp":"2026-07-15T06:07:20.876Z"}
+info: 🐍 Python ML Service is ready. {"timestamp":"2026-07-15T06:07:22.409Z"}
+info: 🐍 Starting Python ML service... {"timestamp":"2026-07-15T06:11:11.363Z"}
+info: Using Python interpreter: python {"timestamp":"2026-07-15T06:11:15.804Z"}
+info: ⏳ Waiting for Python ML service... (1/40) {"timestamp":"2026-07-15T06:11:17.355Z"}
+info: 🐍 Python ML Service is ready. {"timestamp":"2026-07-15T06:11:18.908Z"}
+info: 🐍 Starting Python ML service... {"timestamp":"2026-07-15T06:14:24.004Z"}
+info: Using Python interpreter: python {"timestamp":"2026-07-15T06:14:28.262Z"}
+info: ⏳ Waiting for Python ML service... (1/40) {"timestamp":"2026-07-15T06:14:29.818Z"}
+info: ⏳ Waiting for Python ML service... (2/40) {"timestamp":"2026-07-15T06:14:31.345Z"}
+info: 🐍 Python ML Service is ready. {"timestamp":"2026-07-15T06:14:32.912Z"}
+info: 🐍 Starting Python ML service... {"timestamp":"2026-07-15T06:28:31.559Z"}
+info: 🐍 Starting Python ML service... {"timestamp":"2026-07-15T15:18:34.984Z"}
+info: Using Python interpreter: python {"timestamp":"2026-07-15T15:18:38.628Z"}
+info: ⏳ Waiting for Python ML service... (1/40) {"timestamp":"2026-07-15T15:18:40.157Z"}
+info: 🐍 Python ML Service is ready. {"timestamp":"2026-07-15T15:18:41.692Z"}
+info: 🐍 Starting Python ML service... {"timestamp":"2026-07-15T15:20:34.243Z"}
+info: Using Python interpreter: python {"timestamp":"2026-07-15T15:20:36.251Z"}
+info: ⏳ Waiting for Python ML service... (1/40) {"timestamp":"2026-07-15T15:20:37.767Z"}
+info: 🐍 Python ML Service is ready. {"timestamp":"2026-07-15T15:20:39.292Z"}
+info: 🐍 Starting Python ML service... {"timestamp":"2026-07-15T15:20:47.785Z"}
+info: Using Python interpreter: python {"timestamp":"2026-07-15T15:20:49.914Z"}
+info: ⏳ Waiting for Python ML service... (1/40) {"timestamp":"2026-07-15T15:20:51.435Z"}
+info: 🐍 Python ML Service is ready. {"timestamp":"2026-07-15T15:20:52.982Z"}
+info: 🐍 Starting Python ML service... {"timestamp":"2026-07-15T15:27:29.558Z"}
+info: Using Python interpreter: python {"timestamp":"2026-07-15T15:27:33.071Z"}
+info: ⏳ Waiting for Python ML service... (1/40) {"timestamp":"2026-07-15T15:27:34.596Z"}
+info: ⏳ Waiting for Python ML service... (2/40) {"timestamp":"2026-07-15T15:27:36.110Z"}
+info: 🐍 Python ML Service is ready. {"timestamp":"2026-07-15T15:27:37.638Z"}
+info: 🐍 Starting Python ML service... {"timestamp":"2026-07-15T15:28:05.908Z"}
+info: Using Python interpreter: python {"timestamp":"2026-07-15T15:28:08.392Z"}
+info: ⏳ Waiting for Python ML service... (1/40) {"timestamp":"2026-07-15T15:28:09.920Z"}
+info: 🐍 Python ML Service is ready. {"timestamp":"2026-07-15T15:28:11.446Z"}
+info: 🐍 Starting Python ML service... {"timestamp":"2026-07-15T15:28:25.998Z"}
+info: Using Python interpreter: python {"timestamp":"2026-07-15T15:28:30.842Z"}
+info: ⏳ Waiting for Python ML service... (1/40) {"timestamp":"2026-07-15T15:28:32.391Z"}
+info: 🐍 Python ML Service is ready. {"timestamp":"2026-07-15T15:28:33.952Z"}
+info: 🐍 Starting Python ML service... {"timestamp":"2026-07-15T15:29:42.240Z"}
+info: Using Python interpreter: python {"timestamp":"2026-07-15T15:29:45.219Z"}
+info: ⏳ Waiting for Python ML service... (1/40) {"timestamp":"2026-07-15T15:29:46.762Z"}
+info: 🐍 Python ML Service is ready. {"timestamp":"2026-07-15T15:29:48.312Z"}
+info: Stopping Python ML service... {"timestamp":"2026-07-15T15:30:52.780Z"}
+info: 🐍 Starting Python ML service... {"timestamp":"2026-07-15T15:30:57.332Z"}
+info: Using Python interpreter: python {"timestamp":"2026-07-15T15:31:00.970Z"}
+info: ⏳ Waiting for Python ML service... (1/40) {"timestamp":"2026-07-15T15:31:02.521Z"}
+info: 🐍 Python ML Service is ready. {"timestamp":"2026-07-15T15:31:04.048Z"}
+info: 🐍 Starting Python ML service... {"timestamp":"2026-07-15T15:42:15.803Z"}
+info: Using Python interpreter: python {"timestamp":"2026-07-15T15:42:19.154Z"}
+info: ⏳ Waiting for Python ML service... (1/40) {"timestamp":"2026-07-15T15:42:20.697Z"}
+info: 🐍 Python ML Service is ready. {"timestamp":"2026-07-15T15:42:22.290Z"}
+info: Stopping Python ML service... {"timestamp":"2026-07-15T15:43:37.190Z"}
