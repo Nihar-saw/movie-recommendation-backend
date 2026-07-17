@@ -33,7 +33,7 @@ const searchMovies = async (query, page = 1) => {
 const getMovieDetails = async (movieId) => {
     const { data } = await tmdb.get(`/movie/${movieId}`, {
         params: {
-            append_to_response: "credits,videos"
+            append_to_response: "credits,videos,watch/providers"
         }
     });
     return data;
@@ -44,10 +44,38 @@ const getGenres = async () => {
     return data;
 };
 
+const getTopRatedMovies = async (page = 1) => {
+    const { data } = await tmdb.get("/movie/top_rated", {
+        params: { page }
+    });
+    return data;
+};
+
+const getUpcomingMovies = async (page = 1) => {
+    const { data } = await tmdb.get("/movie/upcoming", {
+        params: { page }
+    });
+    return data;
+};
+
+const discoverMoviesByGenre = async (genreId, page = 1) => {
+    const { data } = await tmdb.get("/discover/movie", {
+        params: {
+            with_genres: genreId,
+            sort_by: "popularity.desc",
+            page
+        }
+    });
+    return data;
+};
+
 module.exports = {
     getTrendingMovies,
     getPopularMovies,
     searchMovies,
     getMovieDetails,
-    getGenres
+    getGenres,
+    getTopRatedMovies,
+    getUpcomingMovies,
+    discoverMoviesByGenre
 };

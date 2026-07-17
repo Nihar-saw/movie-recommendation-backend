@@ -135,10 +135,61 @@ const genres = async (req, res) => {
 
 };
 
+const topRatedMovies = async (req, res) => {
+    try {
+        const page = req.query.page || 1;
+        const movies = await tmdb.getTopRatedMovies(page);
+        res.json({
+            success: true,
+            ...movies
+        });
+    } catch (error) {
+        res.status(500).json({
+            success: false,
+            message: error.message
+        });
+    }
+};
+
+const upcomingMovies = async (req, res) => {
+    try {
+        const page = req.query.page || 1;
+        const movies = await tmdb.getUpcomingMovies(page);
+        res.json({
+            success: true,
+            ...movies
+        });
+    } catch (error) {
+        res.status(500).json({
+            success: false,
+            message: error.message
+        });
+    }
+};
+
+const discoverMovies = async (req, res) => {
+    try {
+        const { genre, page } = req.query;
+        const movies = await tmdb.discoverMoviesByGenre(genre, page || 1);
+        res.json({
+            success: true,
+            ...movies
+        });
+    } catch (error) {
+        res.status(500).json({
+            success: false,
+            message: error.message
+        });
+    }
+};
+
 module.exports = {
     trendingMovies,
     popularMovies,
     searchMovie,
     movieDetails,
-    genres
+    genres,
+    topRatedMovies,
+    upcomingMovies,
+    discoverMovies
 };

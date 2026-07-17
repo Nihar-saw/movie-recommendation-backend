@@ -7,12 +7,21 @@ const {
     popularMovies,
     searchMovie,
     movieDetails,
-    genres
+    genres,
+    topRatedMovies,
+    upcomingMovies,
+    discoverMovies
 } = require("../controllers/movieController");
 
 router.get("/trending", trendingMovies);
 
 router.get("/popular", popularMovies);
+
+router.get("/top-rated", topRatedMovies);
+
+router.get("/upcoming", upcomingMovies);
+
+router.get("/discover", discoverMovies);
 
 router.get("/search", searchMovie);
 
