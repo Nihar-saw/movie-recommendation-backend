@@ -1,4 +1,5 @@
 const User = require("../models/User");
+const { updatePreferenceVector } = require("../services/preferenceService");
 
 const addHistory = async (req, res) => {
 
@@ -40,6 +41,11 @@ const addHistory = async (req, res) => {
         history: user.history
     });
 
+    // Update preference vector in background
+    updatePreferenceVector(req.user._id).catch(err =>
+        console.error("Background vector update error:", err.message)
+    );
+
 };
 
 const getHistory = async (req, res) => {
@@ -62,6 +68,11 @@ const removeHistory = async (req, res) => {
     user.history = user.history.filter(m => m.movieId != movieId);
     await user.save();
     res.json({ success: true, history: user.history });
+
+    // Update preference vector in background
+    updatePreferenceVector(req.user._id).catch(err =>
+        console.error("Background vector update error:", err.message)
+    );
 };
 
 module.exports = {

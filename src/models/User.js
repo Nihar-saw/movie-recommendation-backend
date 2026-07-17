@@ -1,4 +1,4 @@
-﻿const mongoose = require("mongoose");
+const mongoose = require("mongoose");
 const bcrypt = require("bcryptjs");
 
 const userSchema = new mongoose.Schema(
@@ -64,7 +64,17 @@ const userSchema = new mongoose.Schema(
             default: false
         }
     }
-],
+    ],
+
+    preferenceVector: [
+        { type: Number }
+    ],
+
+    tasteProfile: {
+        genres: [String],
+        keywords: [String],
+        directors: [String]
+    }
 
 },
 {

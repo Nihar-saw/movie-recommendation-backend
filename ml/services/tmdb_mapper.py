@@ -20,3 +20,9 @@ def get_tmdb(movie_id):
         return None
 
     return int(row.iloc[0]["tmdbId"])
+
+def get_movie_id(tmdb_id):
+    row = links[links["tmdbId"] == tmdb_id]
+    if row.empty:
+        return None
+    return int(row.iloc[0]["movieId"])

@@ -1,4 +1,5 @@
 const userService = require("../services/userService");
+const { updatePreferenceVector } = require("../services/preferenceService");
 
 const getProfile = async (req, res) => {
 
@@ -23,6 +24,11 @@ const addFavorite = async (req, res) => {
         favorites
     });
 
+    // Update preference vector in background
+    updatePreferenceVector(req.user._id).catch(err =>
+        console.error("Background vector update error:", err.message)
+    );
+
 };
 
 const removeFavorite = async (req, res) => {
@@ -36,6 +42,11 @@ const removeFavorite = async (req, res) => {
         success: true,
         favorites
     });
+
+    // Update preference vector in background
+    updatePreferenceVector(req.user._id).catch(err =>
+        console.error("Background vector update error:", err.message)
+    );
 
 };
 
@@ -51,6 +62,11 @@ const addWatchlist = async (req, res) => {
         watchlist
     });
 
+    // Update preference vector in background
+    updatePreferenceVector(req.user._id).catch(err =>
+        console.error("Background vector update error:", err.message)
+    );
+
 };
 
 const removeWatchlist = async (req, res) => {
@@ -64,6 +80,11 @@ const removeWatchlist = async (req, res) => {
         success: true,
         watchlist
     });
+
+    // Update preference vector in background
+    updatePreferenceVector(req.user._id).catch(err =>
+        console.error("Background vector update error:", err.message)
+    );
 
 };
 
