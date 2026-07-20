@@ -12,6 +12,8 @@ const ratingRoutes = require("./routes/ratingRoutes");
 const recommendationRoutes = require("./routes/recommendationRoutes");
 const historyRoutes = require("./routes/historyRoutes");
 const chatRoutes = require("./routes/chatRoutes");
+const commentRoutes = require("./routes/commentRoutes");
+const googleAuthRoutes = require("./routes/googleAuthRoutes");
 
 const {
     notFound,
@@ -74,6 +76,8 @@ app.use("/api/ratings", ratingRoutes);
 app.use("/api/recommendations", recommendationRoutes);
 app.use("/api/history", historyRoutes);
 app.use("/api/chat", chatRoutes);
+app.use("/api/comments", commentRoutes);
+app.use("/api/auth", googleAuthRoutes);
 
 app.use(notFound);
 

@@ -4,6 +4,33 @@ const tmdbService = require("../services/tmdbService");
 const User = require("../models/User");
 const cache = require("../services/recommendationCache");
 
+// Genre mapping for TMDB discover API
+const GENRE_MAP = {
+    action: 28, adventure: 12, animation: 16, comedy: 35, crime: 80,
+    documentary: 99, drama: 18, family: 10751, fantasy: 14, history: 36,
+    horror: 27, mystery: 9648, romance: 10749, "sci-fi": 878,
+    "science fiction": 878, thriller: 53, war: 10752, western: 37,
+    music: 10402, "tv movie": 10770
+};
+
+// Keyword → genre mappings for natural language
+const KEYWORD_GENRE_MAP = {
+    scary: 27, spooky: 27, creepy: 27, ghost: 27, zombie: 27, haunted: 27,
+    funny: 35, hilarious: 35, laugh: 35, humor: 35,
+    sad: 18, emotional: 18, crying: 18, heartbreaking: 18, tear: 18,
+    love: 10749, romantic: 10749, relationship: 10749, "love story": 10749,
+    space: 878, alien: 878, futuristic: 878, robot: 878, dystopian: 878,
+    fight: 28, superhero: 28, explosion: 28, martial: 28, war: 10752,
+    suspense: 53, "edge of seat": 53, psychological: 53, tense: 53,
+    magic: 14, wizard: 14, dragon: 14, fairy: 14, mythical: 14,
+    detective: 9648, whodunit: 9648, clue: 9648, investigation: 9648,
+    anime: 16, cartoon: 16, animated: 16, pixar: 16,
+    kids: 10751, children: 10751, "family friendly": 10751,
+    historical: 36, "world war": 10752, "true story": 36,
+    documentary: 99, "real life": 99, "based on true": 36,
+    crime: 80, mafia: 80, gangster: 80, heist: 80, robbery: 80,
+};
+
 const chatWithAI = async (req, res) => {
     try {
         const { prompt } = req.body;
@@ -17,12 +44,14 @@ const chatWithAI = async (req, res) => {
 
         // Build personalized context from user data
         let personalizedContext = "";
+        let userGenres = [];
         try {
             const user = await User.findById(req.user._id);
             if (user) {
                 const tp = user.tasteProfile || {};
                 const genres = (tp.genres || []).join(", ");
                 const directors = (tp.directors || []).join(", ");
+                userGenres = tp.genres || [];
 
                 if (genres || directors) {
                     personalizedContext += `\nUser taste profile: Favorite genres: ${genres || "unknown"}. Favorite directors: ${directors || "unknown"}.`;
@@ -69,7 +98,7 @@ const chatWithAI = async (req, res) => {
                 const { data } = await axios.post(
                     "https://api.groq.com/openai/v1/chat/completions",
                     {
-                        model: "llama3-8b-8192",
+                        model: "llama-3.1-8b-instant",
                         messages: [
                             { role: "system", content: systemPrompt },
                             { role: "user", content: prompt }
@@ -81,7 +110,7 @@ const chatWithAI = async (req, res) => {
                             Authorization: `Bearer ${groqApiKey}`,
                             "Content-Type": "application/json"
                         },
-                        timeout: 8000
+                        timeout: 12000
                     }
                 );
                 
@@ -95,103 +124,121 @@ const chatWithAI = async (req, res) => {
                 
                 return res.json({ success: true, response: parsed });
             } catch (err) {
-                console.error("Groq AI failed, falling back to ML model...", err.message);
-                // Fallthrough to ML model fallback
+                console.error("Groq AI failed, falling back to TMDB-based recommendations...", err.message);
+                // Fallthrough to TMDB-based fallback
             }
         }
 
-        // --- ML Model Fallback (No Groq API Key or Groq Failed) ---
-        console.log("Using ML Model Fallback for prompt:", prompt);
-        
-        let targetMovie = "";
-        let movieIds = [];
+        // --- Smart TMDB-Based Fallback ---
+        console.log("Using TMDB fallback for prompt:", prompt);
+        const lowerPrompt = prompt.toLowerCase();
+
+        // 1. Detect genre(s) from the prompt
+        let detectedGenreIds = [];
+        let detectedGenreNames = [];
+
+        // Check direct genre names first
+        for (const [name, id] of Object.entries(GENRE_MAP)) {
+            if (lowerPrompt.includes(name)) {
+                if (!detectedGenreIds.includes(id)) {
+                    detectedGenreIds.push(id);
+                    detectedGenreNames.push(name.charAt(0).toUpperCase() + name.slice(1));
+                }
+            }
+        }
+
+        // Check keyword associations
+        for (const [keyword, id] of Object.entries(KEYWORD_GENRE_MAP)) {
+            if (lowerPrompt.includes(keyword)) {
+                if (!detectedGenreIds.includes(id)) {
+                    detectedGenreIds.push(id);
+                    // Find the genre name from GENRE_MAP
+                    const gName = Object.keys(GENRE_MAP).find(k => GENRE_MAP[k] === id) || keyword;
+                    detectedGenreNames.push(gName.charAt(0).toUpperCase() + gName.slice(1));
+                }
+            }
+        }
+
+        // 2. Try to extract a specific movie title for "like X" queries
+        let specificMovieQuery = null;
+        const likePatterns = [
+            /(?:like|similar to|same as|remind me of|vibe of|feel of)\s+['"]?(.+?)['"]?\s*$/i,
+            /movies?\s+like\s+['"]?(.+?)['"]?\s*$/i,
+            /recommend.*?(?:like|similar)\s+['"]?(.+?)['"]?\s*$/i,
+        ];
+        for (const pattern of likePatterns) {
+            const match = lowerPrompt.match(pattern);
+            if (match && match[1] && match[1].length > 2) {
+                specificMovieQuery = match[1].trim();
+                break;
+            }
+        }
+
+        let movieResults = [];
         let reasonMessage = "";
 
-        // 1. Clean the prompt to extract potential movie title
-        const stopWords = ["recommend", "me", "something", "like", "similar", "to", "movie", "movies", "show", "shows", "but", "darker", "plz", "please", "suggest", "any", "good", "film", "films", "want", "watch", "can", "you", "dark", "happier", "scarier", "funny", "sad"];
-        let cleanedQuery = prompt.toLowerCase();
-        
-        // Remove common punctuation
-        cleanedQuery = cleanedQuery.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?]/g, "");
-        
-        // Remove stop words
-        stopWords.forEach(word => {
-            cleanedQuery = cleanedQuery.replace(new RegExp(`\\b${word}\\b`, 'g'), '');
-        });
-        cleanedQuery = cleanedQuery.trim();
-
-        if (cleanedQuery.length > 2) {
+        // 3. If user asked for "movies like X", search TMDB for that movie and get its recommendations
+        if (specificMovieQuery) {
             try {
-                // Search TMDB to verify if it's a real movie title
-                const searchResult = await tmdbService.searchMovies(cleanedQuery);
-                const results = searchResult.results || searchResult || [];
-                
-                if (results.length > 0) {
-                    const matchedMovie = results[0];
-                    targetMovie = matchedMovie.title;
-                    const targetTmdbId = matchedMovie.id;
-
-                    // Fetch recommendations for the matched movie
-                    let rawRecs = [];
-                    try {
-                        rawRecs = await aiService.getRecommendations(targetMovie);
-                    } catch (err) {
-                        console.error("ML service failed for target movie:", err.message);
-                    }
-
-                    if (rawRecs && Array.isArray(rawRecs) && rawRecs.length > 0) {
-                        movieIds = rawRecs.slice(0, 5).map(r => r.tmdbId || r.movieId || r).filter(id => !isNaN(id) && id !== targetTmdbId);
-                    }
-                    
-                    if (movieIds.length > 0) {
-                        reasonMessage = `I found that you are asking about **${targetMovie}**! Here are some recommended movies similar to it from our Machine Learning recommendation engine:`;
-                    }
+                const searchResult = await tmdbService.searchMovies(specificMovieQuery);
+                const searchResults = searchResult.results || [];
+                if (searchResults.length > 0) {
+                    const matchedMovie = searchResults[0];
+                    // Use TMDB's recommendation endpoint
+                    const tmdb = axios.create({
+                        baseURL: "https://api.themoviedb.org/3",
+                        params: { api_key: process.env.TMDB_API_KEY }
+                    });
+                    const { data: recData } = await tmdb.get(`/movie/${matchedMovie.id}/recommendations`);
+                    movieResults = (recData.results || []).slice(0, 6);
+                    reasonMessage = `Great choice! Here are movies similar to **${matchedMovie.title}** that you'll love:`;
                 }
             } catch (err) {
-                console.error("Error doing dynamic movie extraction/search:", err.message);
+                console.error("TMDB movie-specific recommendation failed:", err.message);
             }
         }
 
-        // 2. Genre Fallback (if no movie was extracted or recommended)
-        if (movieIds.length === 0) {
-            targetMovie = "Inception"; // Default fallback title
-            const lowerPrompt = prompt.toLowerCase();
-            if (lowerPrompt.includes("sci-fi") || lowerPrompt.includes("space") || lowerPrompt.includes("science")) {
-                targetMovie = "Interstellar";
-            } else if (lowerPrompt.includes("emotional") || lowerPrompt.includes("sad") || lowerPrompt.includes("romance")) {
-                targetMovie = "Titanic";
-            } else if (lowerPrompt.includes("funny") || lowerPrompt.includes("comedy")) {
-                targetMovie = "Superbad";
-            } else if (lowerPrompt.includes("action") || lowerPrompt.includes("fight") || lowerPrompt.includes("superhero")) {
-                targetMovie = "The Dark Knight";
-            } else if (lowerPrompt.includes("horror") || lowerPrompt.includes("scary")) {
-                targetMovie = "The Conjuring";
-            } else if (lowerPrompt.includes("thriller") || lowerPrompt.includes("mystery")) {
-                targetMovie = "Shutter Island";
-            }
-
+        // 4. If we detected genres, use TMDB discover
+        if (movieResults.length === 0 && detectedGenreIds.length > 0) {
             try {
-                const rawRecs = await aiService.getRecommendations(targetMovie);
-                if (rawRecs && Array.isArray(rawRecs)) {
-                    movieIds = rawRecs.slice(0, 5).map(r => r.tmdbId || r.movieId || r).filter(id => !isNaN(id));
-                }
+                const genreStr = detectedGenreIds.join(",");
+                const tmdb = axios.create({
+                    baseURL: "https://api.themoviedb.org/3",
+                    params: { api_key: process.env.TMDB_API_KEY }
+                });
+                const { data: discoverData } = await tmdb.get("/discover/movie", {
+                    params: {
+                        with_genres: genreStr,
+                        sort_by: "vote_average.desc",
+                        "vote_count.gte": 500,
+                        page: 1
+                    }
+                });
+                movieResults = (discoverData.results || []).slice(0, 6);
+                reasonMessage = `Here are some top-rated **${detectedGenreNames.join(" & ")}** movies I found for you:`;
             } catch (err) {
-                console.error("ML service failed during genre fallback:", err.message);
+                console.error("TMDB genre discover failed:", err.message);
             }
-
-            reasonMessage = `I noticed you're looking for recommendations related to **${targetMovie}**! Here are some matching movies from my recommendation engine:`;
         }
 
-        // 3. Absolute Hardcoded Fallback if all else fails
-        if (movieIds.length === 0) {
-            movieIds = [157336, 27205, 550, 680]; // Interstellar, Inception, Fight Club, Pulp Fiction
-            reasonMessage = "Here are some of our top-rated recommendations to check out:";
+        // 5. General popular movies fallback
+        if (movieResults.length === 0) {
+            try {
+                const popular = await tmdbService.getPopularMovies();
+                movieResults = (popular.results || []).slice(0, 6);
+                reasonMessage = "Here are some popular movies you might enjoy:";
+            } catch (err) {
+                console.error("TMDB popular fallback failed:", err.message);
+            }
         }
+
+        // Extract TMDB IDs from results
+        const movieIds = movieResults.map(m => m.id);
 
         return res.json({
             success: true,
             response: {
-                text: reasonMessage,
+                text: reasonMessage || "Here are some movies I recommend:",
                 movies: movieIds
             }
         });

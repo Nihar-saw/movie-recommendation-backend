@@ -39,7 +39,9 @@ const registerUser = async (req, res) => {
                 id: user._id,
                 name: user.name,
                 email: user.email,
-                avatar: user.avatar
+                avatar: user.avatar,
+                favorites: user.favorites || [],
+                watchlist: user.watchlist || []
             }
         });
 
@@ -88,7 +90,9 @@ const loginUser = async (req, res) => {
                 id: user._id,
                 name: user.name,
                 email: user.email,
-                avatar: user.avatar
+                avatar: user.avatar,
+                favorites: user.favorites || [],
+                watchlist: user.watchlist || []
             }
         });
 
