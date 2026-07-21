@@ -17,6 +17,8 @@ services:
         sync: false
       - key: GROQ_API_KEY
         sync: false
+      - key: FIREBASE_SERVICE_ACCOUNT
+        sync: false
       - key: PYTHON_SERVICE_URL
         fromService:
           name: movie-recommendation-ml
