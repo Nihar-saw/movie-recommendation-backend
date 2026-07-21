@@ -18,7 +18,15 @@ const userSchema = new mongoose.Schema(
 
     password:{
         type:String,
-        required:true
+        required: function() {
+            return !this.firebaseUid;
+        }
+    },
+
+    firebaseUid:{
+        type:String,
+        unique:true,
+        sparse:true
     },
 
     avatar:{
@@ -83,7 +91,7 @@ const userSchema = new mongoose.Schema(
 
 userSchema.pre("save",async function(next){
 
-    if(!this.isModified("password"))
+    if(!this.password || !this.isModified("password"))
         return next();
 
     const salt=await bcrypt.genSalt(10);

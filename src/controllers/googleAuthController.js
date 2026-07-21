@@ -28,6 +28,16 @@ const googleLogin = async (req, res) => {
 
             });
 
+        } else if (!user.firebaseUid) {
+
+            user.firebaseUid = uid;
+            
+            if (picture && !user.avatar) {
+                user.avatar = picture;
+            }
+
+            await user.save();
+
         }
 
         const token = generateToken(user._id);
